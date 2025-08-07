@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Adding specific assetPrefix for development environment
-  assetPrefix: process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '',
+  assetPrefix: process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : '',
   // Simplifying experimental features to fix static asset loading issues
   experimental: {
     typedRoutes: true,

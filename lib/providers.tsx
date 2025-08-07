@@ -12,11 +12,15 @@ import { trpc } from './trpc/client';
 function getBaseUrl() {
   if (typeof window !== 'undefined') return '';
   if (process.env['VERCEL_URL']) return `https://${process.env['VERCEL_URL']}`;
-  return `http://localhost:${process.env['PORT'] ?? 3000}`;
+  return `http://localhost:${process.env['PORT'] ?? 3001}`;
 }
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  return <TRPCProvider>{children}</TRPCProvider>;
+  return (
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <TRPCProvider>{children}</TRPCProvider>
+    </ThemeProvider>
+  );
 }
 
 function TRPCProvider({ children }: { children: React.ReactNode }) {
@@ -41,21 +45,38 @@ function TRPCProvider({ children }: { children: React.ReactNode }) {
       })
   );
 
-  const [trpcClient] = useState(() =>
-    trpc.createClient({
-      links: [
-        httpBatchLink({
-          url: `${getBaseUrl()}/api/trpc`,
-          transformer: superjson,
-          headers() {
-            return {
-              'Content-Type': 'application/json',
-            };
-          },
-        }),
-      ],
-    })
-  );
+  const [trpcClient] = useState(() => {
+    try {
+      return trpc.createClient({
+        links: [
+          httpBatchLink({
+            url: `${getBaseUrl()}/api/trpc`,
+            transformer: superjson,
+            headers() {
+              return {
+                'Content-Type': 'application/json',
+              };
+            },
+          }),
+        ],
+      });
+    } catch (error) {
+      console.error('Failed to create tRPC client:', error);
+      return null;
+    }
+  });
+
+  // If tRPC client creation failed, just render children without tRPC
+  if (!trpcClient) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        {children}
+        {process.env.NODE_ENV === 'development' && (
+          <ReactQueryDevtools initialIsOpen={false} />
+        )}
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>

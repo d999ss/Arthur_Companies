@@ -6,8 +6,7 @@ import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
 import { WeatherDashboard } from '@/components/weather-dashboard'
 import { FuturesPricing } from '@/components/futures-pricing'
-import { PullQuote, TestimonialGrid } from '@/components/pull-quote'
-import { PlaceholderMedia, RoundedImage } from '@/components/rounded-media'
+// No testimonial or media components needed
 
 export default function HomePage() {
   return (
@@ -150,27 +149,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quote Section */}
-      <section className="section-y-large">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <PullQuote
-                variant="large"
-                quote="Arthur is the kind of company that shows up when it matters. We count on them every year, and every year they deliver."
-                author="Mike Johnson"
-                title="Wheat & Soybean Farmer"
-                company="Cass County"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Values Section */}
       <section className="section-y-large">

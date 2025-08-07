@@ -7,16 +7,16 @@ export default function PrecisionAgricultureResearchPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 lg:py-32">
+      <section className="bg-gradient-to-br from-primary/10 to-primary/20 py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Cpu className="h-16 w-16 mx-auto text-blue-600 mb-6" />
+            <Cpu className="h-16 w-16 mx-auto text-primary mb-6" />
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Precision Agriculture Research</h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
               Development of precision farming technologies and data analytics
             </p>
             <Link href="/contact">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Join Our Research Program
               </Button>
             </Link>
@@ -37,7 +37,7 @@ export default function PrecisionAgricultureResearchPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Satellite className="h-8 w-8 text-blue-600 mb-2" />
+                <Satellite className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Remote Sensing</CardTitle>
               </CardHeader>
               <CardContent>
@@ -47,7 +47,7 @@ export default function PrecisionAgricultureResearchPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <MapPin className="h-8 w-8 text-blue-600 mb-2" />
+                <MapPin className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>GPS Technology</CardTitle>
               </CardHeader>
               <CardContent>
@@ -57,7 +57,7 @@ export default function PrecisionAgricultureResearchPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <BarChart3 className="h-8 w-8 text-blue-600 mb-2" />
+                <BarChart3 className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Data Analytics</CardTitle>
               </CardHeader>
               <CardContent>
@@ -67,7 +67,7 @@ export default function PrecisionAgricultureResearchPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Cpu className="h-8 w-8 text-blue-600 mb-2" />
+                <Cpu className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>IoT Sensors</CardTitle>
               </CardHeader>
               <CardContent>

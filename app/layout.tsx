@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://aug-arthur-mhuirz2j7-bttr.vercel.app'),
+  metadataBase: new URL('https://arthurcompanies.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://aug-arthur-mhuirz2j7-bttr.vercel.app',
+    url: 'https://arthurcompanies.com',
     siteName: 'Arthur Companies',
     title: 'Arthur Companies - Agricultural Excellence Since 1906',
     description: 'For over a century, Arthur Companies has been at the forefront of sustainable agriculture, partnering with farmers across the Northern Plains.',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Arthur Companies - Agricultural Excellence Since 1906',
     description: 'For over a century, Arthur Companies has been at the forefront of sustainable agriculture.',
-    images: ['/og-image.jpg'],
+    images: ['/api/og'],
   },
   robots: {
     index: true,

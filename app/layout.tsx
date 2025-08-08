@@ -4,7 +4,6 @@ import { StructuredData, organizationSchema } from '@/components/structured-data
 import { Toaster } from '@/components/toaster'
 import { Providers } from '@/lib/providers'
 import type { Metadata, Viewport } from 'next'
-import { itcGaramond } from './fonts'
 import './globals.css'
 
 export const viewport: Viewport = {
@@ -86,10 +85,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         {/* Preload critical fonts */}
-        <link rel="preload" href="/itc-garamond-std.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+        <link rel="preload" href="/__styreneB_57fc85-normal-500-100.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         <link rel="preload" href="/__styreneB_57fc85-normal-400-100.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
       </head>
-      <body className={`min-h-screen bg-background font-sans antialiased ${itcGaramond.variable}`}>
+      <body className={`min-h-screen bg-background font-sans antialiased`}>
         <Providers>
           <StructuredData data={organizationSchema} />
           <div className="relative flex min-h-screen flex-col">

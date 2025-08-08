@@ -11,8 +11,8 @@ export default function WholesaleFertilizerPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Truck className="h-16 w-16 mx-auto text-yellow-600 mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Wholesale Fertilizer</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <h1 className="text-display text-foreground mb-6">Wholesale Fertilizer</h1>
+            <p className="text-title text-muted-foreground mb-8">
               Bulk fertilizer distribution and supply chain management
             </p>
             <Link href="/contact">
@@ -28,8 +28,8 @@ export default function WholesaleFertilizerPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive Fertilizer Distribution</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-headline text-foreground mb-4">Comprehensive Fertilizer Distribution</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
               Arthur Companies provides wholesale fertilizer distribution services to retailers, cooperatives, and large farming operations across the region. Our extensive network ensures reliable supply and competitive pricing.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function WholesaleFertilizerPage() {
                 <CardTitle>Bulk Storage</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Large-capacity storage facilities for dry and liquid fertilizers.</p>
+                <p className="text-muted-foreground">Large-capacity storage facilities for dry and liquid fertilizers.</p>
               </CardContent>
             </Card>
 
@@ -51,7 +51,7 @@ export default function WholesaleFertilizerPage() {
                 <CardTitle>Transportation</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Dedicated fleet and logistics network for timely delivery.</p>
+                <p className="text-muted-foreground">Dedicated fleet and logistics network for timely delivery.</p>
               </CardContent>
             </Card>
 
@@ -61,7 +61,7 @@ export default function WholesaleFertilizerPage() {
                 <CardTitle>Supply Planning</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Strategic sourcing and inventory management for optimal availability.</p>
+                <p className="text-muted-foreground">Strategic sourcing and inventory management for optimal availability.</p>
               </CardContent>
             </Card>
 
@@ -71,7 +71,7 @@ export default function WholesaleFertilizerPage() {
                 <CardTitle>Regional Network</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Strategic locations throughout the Northern Plains region.</p>
+                <p className="text-muted-foreground">Strategic locations throughout the Northern Plains region.</p>
               </CardContent>
             </Card>
           </div>
@@ -82,18 +82,18 @@ export default function WholesaleFertilizerPage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Fertilizer Products & Services</h2>
+            <h2 className="text-headline text-foreground mb-8 text-center">Fertilizer Products & Services</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Dry Fertilizer Products</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-muted-foreground mb-4">Dry Fertilizer Products</h3>
+                <p className="text-muted-foreground mb-4">
                   Complete line of dry fertilizer products including straight goods, blends, and specialty formulations for various crop and soil requirements.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Straight Goods</h4>
-                    <ul className="text-gray-600 space-y-1 text-sm">
+                    <h4 className="font-semibold text-foreground mb-2">Straight Goods</h4>
+                    <ul className="text-muted-foreground space-y-1 text-small">
                       <li>• Urea (46-0-0)</li>
                       <li>• DAP (18-46-0)</li>
                       <li>• MAP (11-52-0)</li>
@@ -101,8 +101,8 @@ export default function WholesaleFertilizerPage() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Blended Products</h4>
-                    <ul className="text-gray-600 space-y-1 text-sm">
+                    <h4 className="font-semibold text-foreground mb-2">Blended Products</h4>
+                    <ul className="text-muted-foreground space-y-1 text-small">
                       <li>• Custom NPK blends</li>
                       <li>• Micronutrient enhanced</li>
                       <li>• Slow-release formulations</li>
@@ -113,11 +113,11 @@ export default function WholesaleFertilizerPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Liquid Fertilizer Solutions</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-muted-foreground mb-4">Liquid Fertilizer Solutions</h3>
+                <p className="text-muted-foreground mb-4">
                   Liquid fertilizer products for efficient application and precise nutrient delivery, including starter fertilizers and foliar feeding solutions.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• UAN solutions (28-0-0, 32-0-0)</li>
                   <li>• Liquid starter fertilizers</li>
                   <li>• Foliar feeding solutions</li>
@@ -126,11 +126,11 @@ export default function WholesaleFertilizerPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Distribution Services</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-muted-foreground mb-4">Distribution Services</h3>
+                <p className="text-muted-foreground mb-4">
                   Comprehensive distribution services including storage, handling, transportation, and delivery coordination to meet your specific timing and volume requirements.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Seasonal storage programs</li>
                   <li>• Just-in-time delivery</li>
                   <li>• Custom blending services</li>
@@ -139,11 +139,11 @@ export default function WholesaleFertilizerPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Supply Chain Management</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-muted-foreground mb-4">Supply Chain Management</h3>
+                <p className="text-muted-foreground mb-4">
                   Strategic supply chain management services to optimize your fertilizer procurement, including market analysis, contract negotiation, and risk management.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Market price analysis and forecasting</li>
                   <li>• Contract negotiation and management</li>
                   <li>• Risk management strategies</li>
@@ -158,8 +158,8 @@ export default function WholesaleFertilizerPage() {
       {/* CTA */}
       <section className="py-16 bg-yellow-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Optimize Your Fertilizer Supply Chain</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Optimize Your Fertilizer Supply Chain</h2>
+          <p className="text-title mb-8">
             Partner with Arthur Companies for reliable, cost-effective fertilizer distribution solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -11,8 +11,8 @@ export default function SoilSciencePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <FlaskConical className="h-16 w-16 mx-auto text-amber-600 mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Soil Science Research</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <h1 className="text-display text-foreground mb-6">Soil Science Research</h1>
+            <p className="text-title text-muted-foreground mb-8">
               Comprehensive soil health studies and sustainable agriculture research
             </p>
             <Link href="/contact">
@@ -28,8 +28,8 @@ export default function SoilSciencePage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Soil Research Programs</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-headline text-foreground mb-4">Soil Research Programs</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
               Our soil science research focuses on understanding and improving soil health, nutrient cycling, and sustainable farming practices.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function SoilSciencePage() {
                 <CardTitle>Microbiome Analysis</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Advanced study of soil microbial communities and their impact on plant health.</p>
+                <p className="text-muted-foreground">Advanced study of soil microbial communities and their impact on plant health.</p>
               </CardContent>
             </Card>
 
@@ -51,7 +51,7 @@ export default function SoilSciencePage() {
                 <CardTitle>Nutrient Cycling</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Research on nutrient availability, uptake, and cycling in agricultural systems.</p>
+                <p className="text-muted-foreground">Research on nutrient availability, uptake, and cycling in agricultural systems.</p>
               </CardContent>
             </Card>
 
@@ -61,7 +61,7 @@ export default function SoilSciencePage() {
                 <CardTitle>Carbon Sequestration</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Studies on soil carbon storage and climate change mitigation strategies.</p>
+                <p className="text-muted-foreground">Studies on soil carbon storage and climate change mitigation strategies.</p>
               </CardContent>
             </Card>
 
@@ -71,7 +71,7 @@ export default function SoilSciencePage() {
                 <CardTitle>Health Monitoring</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Development of soil health indicators and monitoring systems.</p>
+                <p className="text-muted-foreground">Development of soil health indicators and monitoring systems.</p>
               </CardContent>
             </Card>
           </div>
@@ -82,15 +82,15 @@ export default function SoilSciencePage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Active Research Projects</h2>
+            <h2 className="text-headline text-foreground mb-8 text-center">Active Research Projects</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Soil Microbiome Initiative</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Soil Microbiome Initiative</h3>
+                <p className="text-muted-foreground mb-4">
                   Comprehensive analysis of soil microbial communities to understand their role in plant nutrition, disease suppression, and soil health.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Metagenomic sequencing of soil samples</li>
                   <li>• Functional analysis of microbial communities</li>
                   <li>• Beneficial microbe isolation and characterization</li>
@@ -99,11 +99,11 @@ export default function SoilSciencePage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Sustainable Nutrient Management</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Sustainable Nutrient Management</h3>
+                <p className="text-muted-foreground mb-4">
                   Research on optimizing nutrient use efficiency and developing sustainable fertilizer strategies for long-term soil health.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Precision nutrient application research</li>
                   <li>• Organic matter decomposition studies</li>
                   <li>• Nutrient loss mitigation strategies</li>
@@ -112,11 +112,11 @@ export default function SoilSciencePage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Climate-Smart Agriculture</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Climate-Smart Agriculture</h3>
+                <p className="text-muted-foreground mb-4">
                   Developing soil management practices that enhance carbon sequestration and improve resilience to climate change.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Cover crop impact assessment</li>
                   <li>• No-till system optimization</li>
                   <li>• Soil carbon measurement protocols</li>
@@ -131,8 +131,8 @@ export default function SoilSciencePage() {
       {/* CTA */}
       <section className="py-16 bg-amber-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Advance Soil Science Research</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Advance Soil Science Research</h2>
+          <p className="text-title mb-8">
             Join our soil science research initiatives to develop sustainable agricultural practices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

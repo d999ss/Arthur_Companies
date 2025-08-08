@@ -1,8 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Beaker, TrendingUp, Leaf, BarChart3, ChevronRight } from 'lucide-react'
+import { ArrowRight, BarChart3, Beaker, ChevronRight, Leaf, TrendingUp } from 'lucide-react'
+import Link from "next/link"
 
 export default function SoilHealthPage() {
   return (
@@ -51,8 +51,8 @@ export default function SoilHealthPage() {
           >
             <h2 className="text-headline mb-6">Comprehensive soil management</h2>
             <p className="text-body-large max-w-3xl mx-auto">
-              Healthy soil is the foundation of productive agriculture. Our soil health 
-              programs combine advanced testing, biological monitoring, and precision 
+              Healthy soil is the foundation of productive agriculture. Our soil health
+              programs combine advanced testing, biological monitoring, and precision
               nutrition to optimize your soil's potential.
             </p>
           </motion.div>
@@ -120,7 +120,7 @@ export default function SoilHealthPage() {
                 "The health of soil, plant, animal and man is one and indivisible."
               </div>
             </motion.div>
-            
+
             <div className="space-y-8">
               {[
                 {
@@ -184,7 +184,7 @@ export default function SoilHealthPage() {
                     <div className="grid md:grid-cols-2 gap-6">
                       {program.sections.map((section, sectionIndex) => (
                         <div key={sectionIndex}>
-                          <h4 className="text-body-medium font-semibold mb-2">{section.title}</h4>
+                          <h4 className="text-title mb-2">{section.title}</h4>
                           <ul className="text-body space-y-2">
                             {section.items.map((item, itemIndex) => (
                               <li key={itemIndex} className="flex items-start">
@@ -227,18 +227,18 @@ export default function SoilHealthPage() {
                 Invest in your soil's future
               </h2>
               <p className="text-body-large mb-12 opacity-90">
-                Start building healthier, more productive soils with our comprehensive 
+                Start building healthier, more productive soils with our comprehensive
                 soil health programs.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link 
+                <Link
                   href="/contact"
                   className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-background text-foreground hover:bg-background/90 transition-all duration-200 text-sm font-medium"
                 >
                   Schedule Soil Testing
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link 
+                <Link
                   href="/locations"
                   className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
                 >

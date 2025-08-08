@@ -1,8 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Sprout, Award, BarChart3, Shield, ChevronRight } from 'lucide-react'
+import { ArrowRight, Award, BarChart3, ChevronRight, Shield, Sprout } from 'lucide-react'
+import Link from "next/link"
 
 export default function SpecialtyCropsPage() {
   return (
@@ -51,8 +51,8 @@ export default function SpecialtyCropsPage() {
           >
             <h2 className="text-headline mb-6">Premium specialty crop programs</h2>
             <p className="text-body-large max-w-3xl mx-auto">
-              Arthur Companies connects growers with premium markets through identity-preserved 
-              and specialty crop programs. Earn higher returns by growing crops that meet 
+              Arthur Companies connects growers with premium markets through identity-preserved
+              and specialty crop programs. Earn higher returns by growing crops that meet
               specific end-user requirements.
             </p>
           </motion.div>
@@ -120,7 +120,7 @@ export default function SpecialtyCropsPage() {
                 "Quality is remembered long after price is forgotten."
               </div>
             </motion.div>
-            
+
             <div className="space-y-8">
               {[
                 {
@@ -194,7 +194,7 @@ export default function SpecialtyCropsPage() {
                     <div className="grid md:grid-cols-2 gap-6">
                       {program.sections.map((section, sectionIndex) => (
                         <div key={sectionIndex}>
-                          <h4 className="text-body-medium font-semibold mb-2">{section.title}</h4>
+                          <h4 className="text-title mb-2">{section.title}</h4>
                           <ul className="text-body space-y-2">
                             {section.items.map((item, itemIndex) => (
                               <li key={itemIndex} className="flex items-start">
@@ -237,18 +237,18 @@ export default function SpecialtyCropsPage() {
                 Unlock premium crop values
               </h2>
               <p className="text-body-large mb-12 opacity-90">
-                Discover how specialty crop programs can increase your farm's 
+                Discover how specialty crop programs can increase your farm's
                 profitability and market opportunities.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link 
+                <Link
                   href="/contact"
                   className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-background text-foreground hover:bg-background/90 transition-all duration-200 text-sm font-medium"
                 >
                   Join a Program
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link 
+                <Link
                   href="/contact"
                   className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
                 >

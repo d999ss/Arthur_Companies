@@ -11,8 +11,8 @@ export default function PortfolioManagementPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <TrendingUp className="h-16 w-16 mx-auto text-primary mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Portfolio Management</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <h1 className="text-display text-foreground mb-6">Portfolio Management</h1>
+            <p className="text-title text-muted-foreground mb-8">
               Active portfolio management and strategic guidance for venture investments
             </p>
             <Link href="/contact">
@@ -28,8 +28,8 @@ export default function PortfolioManagementPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Portfolio Management Services</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-headline text-foreground mb-4">Portfolio Management Services</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
               Our active portfolio management approach maximizes value creation and growth potential for all investments.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function PortfolioManagementPage() {
                 <CardTitle>Strategic Guidance</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Strategic advisory services and board-level guidance for portfolio companies.</p>
+                <p className="text-muted-foreground">Strategic advisory services and board-level guidance for portfolio companies.</p>
               </CardContent>
             </Card>
 
@@ -51,7 +51,7 @@ export default function PortfolioManagementPage() {
                 <CardTitle>Operational Support</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Hands-on operational support and expertise sharing across portfolio.</p>
+                <p className="text-muted-foreground">Hands-on operational support and expertise sharing across portfolio.</p>
               </CardContent>
             </Card>
 
@@ -61,7 +61,7 @@ export default function PortfolioManagementPage() {
                 <CardTitle>Performance Monitoring</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Comprehensive performance tracking and KPI monitoring systems.</p>
+                <p className="text-muted-foreground">Comprehensive performance tracking and KPI monitoring systems.</p>
               </CardContent>
             </Card>
 
@@ -71,7 +71,7 @@ export default function PortfolioManagementPage() {
                 <CardTitle>Growth Acceleration</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Value-add services to accelerate growth and market expansion.</p>
+                <p className="text-muted-foreground">Value-add services to accelerate growth and market expansion.</p>
               </CardContent>
             </Card>
           </div>
@@ -82,15 +82,15 @@ export default function PortfolioManagementPage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Management Approach</h2>
+            <h2 className="text-headline text-foreground mb-8 text-center">Our Management Approach</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Active Value Creation</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Active Value Creation</h3>
+                <p className="text-muted-foreground mb-4">
                   Hands-on approach to value creation through strategic guidance, operational improvements, and growth initiatives.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Strategic planning and execution</li>
                   <li>• Business model optimization</li>
                   <li>• Market expansion strategies</li>
@@ -99,11 +99,11 @@ export default function PortfolioManagementPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Network Leverage</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Network Leverage</h3>
+                <p className="text-muted-foreground mb-4">
                   Leveraging our extensive network of industry contacts, partners, and resources to benefit portfolio companies.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Customer introductions and partnerships</li>
                   <li>• Supplier and vendor connections</li>
                   <li>• Talent acquisition support</li>
@@ -112,11 +112,11 @@ export default function PortfolioManagementPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Risk Management</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Risk Management</h3>
+                <p className="text-muted-foreground mb-4">
                   Proactive risk identification and mitigation strategies to protect and enhance portfolio value.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Regular performance reviews</li>
                   <li>• Risk assessment and mitigation</li>
                   <li>• Crisis management support</li>
@@ -131,8 +131,8 @@ export default function PortfolioManagementPage() {
       {/* CTA */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Maximize Your Investment Potential</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Maximize Your Investment Potential</h2>
+          <p className="text-title mb-8">
             Partner with Arthur Companies for active portfolio management and strategic value creation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

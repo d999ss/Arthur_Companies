@@ -11,8 +11,8 @@ export default function PrecisionAgricultureResearchPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Cpu className="h-16 w-16 mx-auto text-primary mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Precision Agriculture Research</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <h1 className="text-display text-foreground mb-6">Precision Agriculture Research</h1>
+            <p className="text-title text-muted-foreground mb-8">
               Development of precision farming technologies and data analytics
             </p>
             <Link href="/contact">
@@ -28,8 +28,8 @@ export default function PrecisionAgricultureResearchPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Technology Development</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-headline text-foreground mb-4">Technology Development</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
               Our precision agriculture research develops cutting-edge technologies for optimized crop management and resource efficiency.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function PrecisionAgricultureResearchPage() {
                 <CardTitle>Remote Sensing</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Advanced satellite and drone imaging for crop monitoring and analysis.</p>
+                <p className="text-muted-foreground">Advanced satellite and drone imaging for crop monitoring and analysis.</p>
               </CardContent>
             </Card>
 
@@ -51,7 +51,7 @@ export default function PrecisionAgricultureResearchPage() {
                 <CardTitle>GPS Technology</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">High-precision GPS systems for accurate field operations and mapping.</p>
+                <p className="text-muted-foreground">High-precision GPS systems for accurate field operations and mapping.</p>
               </CardContent>
             </Card>
 
@@ -61,7 +61,7 @@ export default function PrecisionAgricultureResearchPage() {
                 <CardTitle>Data Analytics</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Advanced algorithms for agricultural data processing and decision support.</p>
+                <p className="text-muted-foreground">Advanced algorithms for agricultural data processing and decision support.</p>
               </CardContent>
             </Card>
 
@@ -71,7 +71,7 @@ export default function PrecisionAgricultureResearchPage() {
                 <CardTitle>IoT Sensors</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Internet of Things sensors for real-time field monitoring and automation.</p>
+                <p className="text-muted-foreground">Internet of Things sensors for real-time field monitoring and automation.</p>
               </CardContent>
             </Card>
           </div>
@@ -82,15 +82,15 @@ export default function PrecisionAgricultureResearchPage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Research Initiatives</h2>
+            <h2 className="text-headline text-foreground mb-8 text-center">Research Initiatives</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Sensor Networks</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Smart Sensor Networks</h3>
+                <p className="text-muted-foreground mb-4">
                   Development of wireless sensor networks for continuous monitoring of soil conditions, weather, and crop health.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Soil moisture and temperature sensors</li>
                   <li>• Weather station integration</li>
                   <li>• Plant health monitoring devices</li>
@@ -99,11 +99,11 @@ export default function PrecisionAgricultureResearchPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Machine Learning Applications</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Machine Learning Applications</h3>
+                <p className="text-muted-foreground mb-4">
                   Advanced AI and machine learning algorithms for predictive analytics and automated decision-making in agriculture.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Yield prediction models</li>
                   <li>• Disease detection algorithms</li>
                   <li>• Optimal planting recommendations</li>
@@ -112,11 +112,11 @@ export default function PrecisionAgricultureResearchPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Autonomous Systems</h3>
+                <p className="text-muted-foreground mb-4">
                   Research and development of autonomous agricultural machinery and robotic systems for precision farming operations.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Autonomous tractor navigation</li>
                   <li>• Robotic crop monitoring</li>
                   <li>• Precision application systems</li>
@@ -131,8 +131,8 @@ export default function PrecisionAgricultureResearchPage() {
       {/* CTA */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Pioneer Precision Agriculture Technology</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Pioneer Precision Agriculture Technology</h2>
+          <p className="text-title mb-8">
             Collaborate with our research team to develop the next generation of precision farming solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

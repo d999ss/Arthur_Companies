@@ -17,9 +17,9 @@ export default function NotFound() {
     <div className="min-h-[60vh] flex items-center justify-center px-4">
       <div className="text-center max-w-md mx-auto">
         <div className="mb-8">
-          <h1 className="text-6xl font-bold text-brand-primary mb-4">404</h1>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Page Not Found</h2>
-          <p className="text-gray-600 mb-8">
+          <h1 className="text-display text-primary mb-4">404</h1>
+          <h2 className="text-headline mb-4">Page Not Found</h2>
+          <p className="text-body text-muted-foreground mb-8">
             The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
           </p>
         </div>
@@ -41,8 +41,8 @@ export default function NotFound() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray-200">
-          <p className="text-sm text-gray-500">
-            Need help? <Link href="/contact" className="text-brand-primary hover:underline focus-ring">Contact us</Link>
+          <p className="text-small text-muted-foreground">
+            Need help? <Link href="/contact" className="text-primary hover:underline focus-ring">Contact us</Link>
           </p>
         </div>
       </div>

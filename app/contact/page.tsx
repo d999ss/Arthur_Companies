@@ -1,8 +1,8 @@
 "use client"
 
-import type { Metadata } from 'next';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+
 import { motion } from "framer-motion";
+import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 
 import { ContactForm } from '@/components/contact-form';
 
@@ -63,7 +63,7 @@ export default function ContactPage() {
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-body-medium">Arthur Companies</p>
+                      <p className="text-body">Arthur Companies</p>
                       <p className="text-body text-muted-foreground">100 Innovation Drive, Arthur, ND 58006</p>
                     </div>
                   </div>
@@ -99,23 +99,23 @@ export default function ContactPage() {
                       phone: "(701) 967-8312"
                     },
                     {
-                      name: "Carrington", 
+                      name: "Carrington",
                       address: "1010 Hwy 281 N, Carrington, ND 58421",
                       phone: "(701) 652-2232"
                     },
                     {
                       name: "Harvey",
-                      address: "600 Lincoln Ave, Harvey, ND 58341", 
+                      address: "600 Lincoln Ave, Harvey, ND 58341",
                       phone: "(701) 324-4633"
                     },
                     {
                       name: "Page",
-                      address: "50 Main St, Page, ND 58064", 
+                      address: "50 Main St, Page, ND 58064",
                       phone: "(701) 668-2326"
                     }
-                  ].map((location, index) => (
+                  ].map((location) => (
                     <div key={location.name} className="pb-4 border-b border-border/30 last:border-0 last:pb-0">
-                      <h4 className="text-body-medium mb-2">{location.name}</h4>
+                      <h4 className="text-title mb-2">{location.name}</h4>
                       <p className="text-small text-muted-foreground mb-1">{location.address}</p>
                       <p className="text-small text-muted-foreground">{location.phone}</p>
                     </div>

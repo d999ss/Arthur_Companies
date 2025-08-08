@@ -1,8 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
+import Link from "next/link"
 
 export default function AboutPage() {
   return (
@@ -18,7 +18,7 @@ export default function AboutPage() {
             >
               <h1 className="text-display mb-8 text-balance">
                 Built on Trust, Driven by{" "}
-                <span className="text-serif-large text-primary italic">Innovation</span>
+                <span className="text-title text-primary italic">Innovation</span>
               </h1>
               <p className="text-body-large mb-12 max-w-2xl mx-auto">
                 Three generations of agricultural leadership in the Northern Plains.
@@ -40,7 +40,7 @@ export default function AboutPage() {
       {/* Statistics */}
       <section className="section-y bg-secondary/20">
         <div className="container">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -49,22 +49,22 @@ export default function AboutPage() {
           >
             <div className="text-center">
               <div className="text-5xl font-medium text-primary mb-3">75+</div>
-              <div className="text-body-medium mb-2">Years</div>
+              <div className="text-body mb-2">Years</div>
               <div className="text-small">Serving North Dakota farmers since 1948</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-medium text-primary mb-3">15</div>
-              <div className="text-body-medium mb-2">Locations</div>
+              <div className="text-body mb-2">Locations</div>
               <div className="text-small">Strategic locations across the region</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-medium text-primary mb-3">500+</div>
-              <div className="text-body-medium mb-2">Employees</div>
+              <div className="text-body mb-2">Employees</div>
               <div className="text-small">Dedicated agricultural professionals</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-medium text-primary mb-3">$2B+</div>
-              <div className="text-body-medium mb-2">Revenue</div>
+              <div className="text-body mb-2">Revenue</div>
               <div className="text-small">Supporting local agricultural economy</div>
             </div>
           </motion.div>
@@ -94,15 +94,15 @@ export default function AboutPage() {
               <div className="text-body mb-8">
                 <strong>Ownership:</strong> Family-owned fourth-generation agricultural business
               </div>
-              <Link 
+              <Link
                 href="/about/history"
                 className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
               >
-                <span className="text-body-medium">Learn about our history</span>
+                <span className="text-body">Learn about our history</span>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -133,7 +133,7 @@ export default function AboutPage() {
           >
             <h2 className="text-headline mb-6">Leadership Team</h2>
             <p className="text-body-large max-w-2xl mx-auto">
-              Meet the leaders driving Arthur Companies forward with vision, 
+              Meet the leaders driving Arthur Companies forward with vision,
               expertise, and deep commitment to agricultural excellence.
             </p>
           </motion.div>
@@ -146,13 +146,13 @@ export default function AboutPage() {
                 description: "Fourth-generation leader with over 25 years of experience in agricultural business and innovation."
               },
               {
-                name: "Sarah Mitchell", 
+                name: "Sarah Mitchell",
                 title: "Chief Operating Officer",
                 description: "Oversees daily operations with 18 years at Arthur and deep expertise in supply chain optimization."
               },
               {
                 name: "Dr. Michael Chen",
-                title: "Chief Technology Officer", 
+                title: "Chief Technology Officer",
                 description: "Leads innovation and technology development with expertise in agricultural engineering and data science."
               }
             ].map((leader, index) => (
@@ -168,7 +168,7 @@ export default function AboutPage() {
                   <div className="text-2xl text-primary/60">👤</div>
                 </div>
                 <h3 className="text-title mb-2">{leader.name}</h3>
-                <p className="text-primary text-body-medium mb-3">{leader.title}</p>
+                <p className="text-primary text-body mb-3">{leader.title}</p>
                 <p className="text-body text-muted-foreground">
                   {leader.description}
                 </p>
@@ -176,7 +176,7 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

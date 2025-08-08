@@ -11,8 +11,8 @@ export default function InnovationIncubatorPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Target className="h-16 w-16 mx-auto text-purple-600 mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Innovation Incubator</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <h1 className="text-display text-foreground mb-6">Innovation Incubator</h1>
+            <p className="text-title text-muted-foreground mb-8">
               Comprehensive incubation program for agricultural innovations
             </p>
             <Link href="/contact">
@@ -28,8 +28,8 @@ export default function InnovationIncubatorPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Incubator Program</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-headline text-foreground mb-4">Incubator Program</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
               Our comprehensive incubation program provides funding, mentorship, and resources to promising agricultural innovations.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function InnovationIncubatorPage() {
                 <CardTitle>Idea Development</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Support for early-stage concept development and validation.</p>
+                <p className="text-muted-foreground">Support for early-stage concept development and validation.</p>
               </CardContent>
             </Card>
 
@@ -51,7 +51,7 @@ export default function InnovationIncubatorPage() {
                 <CardTitle>Mentorship</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Access to experienced mentors and industry experts.</p>
+                <p className="text-muted-foreground">Access to experienced mentors and industry experts.</p>
               </CardContent>
             </Card>
 
@@ -61,7 +61,7 @@ export default function InnovationIncubatorPage() {
                 <CardTitle>Funding Support</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Seed funding and investment readiness preparation.</p>
+                <p className="text-muted-foreground">Seed funding and investment readiness preparation.</p>
               </CardContent>
             </Card>
 
@@ -71,7 +71,7 @@ export default function InnovationIncubatorPage() {
                 <CardTitle>Market Access</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Connections to customers, partners, and distribution channels.</p>
+                <p className="text-muted-foreground">Connections to customers, partners, and distribution channels.</p>
               </CardContent>
             </Card>
           </div>
@@ -82,15 +82,15 @@ export default function InnovationIncubatorPage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Program Structure</h2>
+            <h2 className="text-headline text-foreground mb-8 text-center">Program Structure</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">12-Month Accelerated Program</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">12-Month Accelerated Program</h3>
+                <p className="text-muted-foreground mb-4">
                   Intensive 12-month program designed to accelerate agricultural innovations from concept to market-ready solutions.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Structured curriculum and milestones</li>
                   <li>• Weekly mentorship sessions</li>
                   <li>• Access to research facilities</li>
@@ -99,11 +99,11 @@ export default function InnovationIncubatorPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Resources and Support</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Resources and Support</h3>
+                <p className="text-muted-foreground mb-4">
                   Comprehensive support including funding, facilities, expertise, and network access to maximize success potential.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Up to $250K in seed funding</li>
                   <li>• Dedicated workspace and labs</li>
                   <li>• Legal and IP support</li>
@@ -112,11 +112,11 @@ export default function InnovationIncubatorPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Success Metrics</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Success Metrics</h3>
+                <p className="text-muted-foreground mb-4">
                   Clear success metrics and graduation criteria to ensure program effectiveness and startup readiness.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Product development milestones</li>
                   <li>• Customer validation metrics</li>
                   <li>• Revenue and growth targets</li>
@@ -131,8 +131,8 @@ export default function InnovationIncubatorPage() {
       {/* CTA */}
       <section className="py-16 bg-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Accelerate Your Agricultural Innovation</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Accelerate Your Agricultural Innovation</h2>
+          <p className="text-title mb-8">
             Join our incubator program to transform your agricultural innovation into a successful business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

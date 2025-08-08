@@ -1,8 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Globe, Satellite, MapPin, BarChart3, ChevronRight } from 'lucide-react'
+import { ArrowRight, BarChart3, ChevronRight, Globe, MapPin, Satellite } from 'lucide-react'
+import Link from "next/link"
 
 export default function PrecisionAgriculturePage() {
   return (
@@ -51,7 +51,7 @@ export default function PrecisionAgriculturePage() {
           >
             <h2 className="text-headline mb-6">Advanced precision technology</h2>
             <p className="text-body-large max-w-3xl mx-auto">
-              Harness the power of GPS, satellite imagery, and data analytics to optimize 
+              Harness the power of GPS, satellite imagery, and data analytics to optimize
               every aspect of your farming operation with precision agriculture technology.
             </p>
           </motion.div>
@@ -119,7 +119,7 @@ export default function PrecisionAgriculturePage() {
                 "Technology that transforms farming from art to science."
               </div>
             </motion.div>
-            
+
             <div className="space-y-8">
               {[
                 {
@@ -183,7 +183,7 @@ export default function PrecisionAgriculturePage() {
                     <div className="grid md:grid-cols-2 gap-6">
                       {service.sections.map((section, sectionIndex) => (
                         <div key={sectionIndex}>
-                          <h4 className="text-body-medium font-semibold mb-2">{section.title}</h4>
+                          <h4 className="text-title mb-2">{section.title}</h4>
                           <ul className="text-body space-y-2">
                             {section.items.map((item, itemIndex) => (
                               <li key={itemIndex} className="flex items-start">
@@ -226,18 +226,18 @@ export default function PrecisionAgriculturePage() {
                 Ready to farm with precision?
               </h2>
               <p className="text-body-large mb-12 opacity-90">
-                Discover how precision agriculture technology can improve your farm's 
+                Discover how precision agriculture technology can improve your farm's
                 efficiency and profitability.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link 
+                <Link
                   href="/contact"
                   className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-background text-foreground hover:bg-background/90 transition-all duration-200 text-sm font-medium"
                 >
                   Schedule Demo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link 
+                <Link
                   href="/locations"
                   className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
                 >

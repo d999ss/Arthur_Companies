@@ -11,8 +11,8 @@ export default function TechnologyAccelerationPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Zap className="h-16 w-16 mx-auto text-yellow-600 mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Technology Acceleration</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <h1 className="text-display text-foreground mb-6">Technology Acceleration</h1>
+            <p className="text-title text-muted-foreground mb-8">
               Fast-track development for breakthrough agricultural technologies
             </p>
             <Link href="/contact">
@@ -28,8 +28,8 @@ export default function TechnologyAccelerationPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Acceleration Services</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-headline text-foreground mb-4">Acceleration Services</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
               Our technology acceleration program fast-tracks the development and commercialization of breakthrough agricultural technologies.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function TechnologyAccelerationPage() {
                 <CardTitle>Rapid Prototyping</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Fast-track prototype development and testing capabilities.</p>
+                <p className="text-muted-foreground">Fast-track prototype development and testing capabilities.</p>
               </CardContent>
             </Card>
 
@@ -51,7 +51,7 @@ export default function TechnologyAccelerationPage() {
                 <CardTitle>Technology Validation</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Comprehensive testing and validation of agricultural technologies.</p>
+                <p className="text-muted-foreground">Comprehensive testing and validation of agricultural technologies.</p>
               </CardContent>
             </Card>
 
@@ -61,7 +61,7 @@ export default function TechnologyAccelerationPage() {
                 <CardTitle>Market Testing</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Real-world testing and market validation programs.</p>
+                <p className="text-muted-foreground">Real-world testing and market validation programs.</p>
               </CardContent>
             </Card>
 
@@ -71,7 +71,7 @@ export default function TechnologyAccelerationPage() {
                 <CardTitle>Commercialization</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Support for bringing technologies to market quickly and effectively.</p>
+                <p className="text-muted-foreground">Support for bringing technologies to market quickly and effectively.</p>
               </CardContent>
             </Card>
           </div>
@@ -82,15 +82,15 @@ export default function TechnologyAccelerationPage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Acceleration Process</h2>
+            <h2 className="text-headline text-foreground mb-8 text-center">Acceleration Process</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Technology Assessment</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Technology Assessment</h3>
+                <p className="text-muted-foreground mb-4">
                   Comprehensive evaluation of technology potential, market fit, and commercialization readiness.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Technical feasibility analysis</li>
                   <li>• Market opportunity assessment</li>
                   <li>• Competitive landscape review</li>
@@ -99,11 +99,11 @@ export default function TechnologyAccelerationPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Development Acceleration</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Development Acceleration</h3>
+                <p className="text-muted-foreground mb-4">
                   Intensive development support to rapidly advance technologies from concept to market-ready solutions.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Dedicated development resources</li>
                   <li>• Expert technical guidance</li>
                   <li>• Access to testing facilities</li>
@@ -112,11 +112,11 @@ export default function TechnologyAccelerationPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Market Launch Support</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Market Launch Support</h3>
+                <p className="text-muted-foreground mb-4">
                   Comprehensive support for successful market entry and commercial adoption of accelerated technologies.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Go-to-market strategy development</li>
                   <li>• Customer pilot programs</li>
                   <li>• Sales and marketing support</li>
@@ -131,8 +131,8 @@ export default function TechnologyAccelerationPage() {
       {/* CTA */}
       <section className="py-16 bg-yellow-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Accelerate Your Agricultural Innovation</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Accelerate Your Agricultural Innovation</h2>
+          <p className="text-title mb-8">
             Fast-track your technology development with our comprehensive acceleration program.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

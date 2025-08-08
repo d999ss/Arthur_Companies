@@ -1,8 +1,8 @@
 'use client';
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { Heart, DollarSign, GraduationCap, Clock, Award, Users, AlertCircle, ArrowRight } from 'lucide-react';
+import { AlertCircle, ArrowRight, Clock, DollarSign, GraduationCap, Heart } from 'lucide-react';
+import Link from "next/link";
 
 import { trpc } from '@/lib/trpc/client';
 
@@ -44,7 +44,7 @@ export default function CareersPage() {
             <div className="flex justify-between items-start mb-6">
               <div>
                 <h3 className="text-title mb-2">{job.title}</h3>
-                <p className="text-primary text-body-medium">{job.department}</p>
+                <p className="text-primary text-body">{job.department}</p>
               </div>
               <div className="text-right text-small text-muted-foreground">
                 <p>{job.location}</p>
@@ -80,7 +80,7 @@ export default function CareersPage() {
                 Join our team of agricultural professionals. We offer competitive benefits, professional development opportunities, and a collaborative work environment.
               </p>
               <p className="text-body mb-12 max-w-2xl mx-auto">
-                We offer competitive benefits, professional development opportunities, and a collaborative work environment 
+                We offer competitive benefits, professional development opportunities, and a collaborative work environment
                 where your contributions make a real impact.
               </p>
             </motion.div>
@@ -106,20 +106,20 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {[
-              { 
-                title: "Innovation", 
+              {
+                title: "Innovation",
                 description: "We embrace new ideas and technologies to advance agriculture and improve farmer outcomes."
               },
-              { 
-                title: "Integrity", 
+              {
+                title: "Integrity",
                 description: "We conduct business with honesty, transparency, and ethical practices in all our relationships."
               },
-              { 
-                title: "Collaboration", 
+              {
+                title: "Collaboration",
                 description: "We work together as a team, valuing diverse perspectives and shared success."
               },
-              { 
-                title: "Excellence", 
+              {
+                title: "Excellence",
                 description: "We strive for excellence in everything we do, continuously improving our services and solutions."
               }
             ].map((value, index) => (
@@ -159,24 +159,24 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {[
-              { 
+              {
                 icon: Heart,
-                title: "Health & Wellness", 
+                title: "Health & Wellness",
                 description: "Comprehensive health insurance, dental, vision, and wellness programs for you and your family."
               },
-              { 
+              {
                 icon: DollarSign,
-                title: "Retirement", 
+                title: "Retirement",
                 description: "401(k) with company matching, pension plans, and financial planning resources."
               },
-              { 
+              {
                 icon: GraduationCap,
-                title: "Development", 
+                title: "Development",
                 description: "Continuing education opportunities, conference attendance, and skill development programs."
               },
-              { 
+              {
                 icon: Clock,
-                title: "Work-Life Balance", 
+                title: "Work-Life Balance",
                 description: "Flexible work arrangements, generous PTO, and family-friendly policies."
               }
             ].map((benefit, index) => {
@@ -208,8 +208,8 @@ export default function CareersPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Current Openings</h2>
-            <p className="text-lg text-gray-600">Join our growing team</p>
+            <h2 className="text-headline text-foreground mb-4">Current Openings</h2>
+            <p className="text-body-large text-muted-foreground">Join our growing team</p>
           </div>
 
           {renderJobsSection()}
@@ -219,8 +219,8 @@ export default function CareersPage() {
       {/* CTA */}
       <section className="section-y-large bg-foreground text-background">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Grow Your Career?</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Ready to Grow Your Career?</h2>
+          <p className="text-title mb-8">
             Don't see the perfect role? We're always looking for talented individuals to join our team.
           </p>
           <Link href="/contact" className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium">

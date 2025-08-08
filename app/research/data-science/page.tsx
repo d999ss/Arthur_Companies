@@ -11,8 +11,8 @@ export default function DataSciencePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <BarChart3 className="h-16 w-16 mx-auto text-indigo-600 mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Data Science & Analytics</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <h1 className="text-display text-foreground mb-6">Data Science & Analytics</h1>
+            <p className="text-title text-muted-foreground mb-8">
               Advanced data modeling and machine learning for agricultural insights
             </p>
             <Link href="/contact">
@@ -28,8 +28,8 @@ export default function DataSciencePage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Data Science Applications</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-headline text-foreground mb-4">Data Science Applications</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
               Our data science team develops advanced analytics and machine learning solutions to transform agricultural data into actionable insights.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function DataSciencePage() {
                 <CardTitle>Machine Learning</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">AI algorithms for predictive modeling and automated decision-making.</p>
+                <p className="text-muted-foreground">AI algorithms for predictive modeling and automated decision-making.</p>
               </CardContent>
             </Card>
 
@@ -51,7 +51,7 @@ export default function DataSciencePage() {
                 <CardTitle>Big Data Processing</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Large-scale data processing and analysis for agricultural applications.</p>
+                <p className="text-muted-foreground">Large-scale data processing and analysis for agricultural applications.</p>
               </CardContent>
             </Card>
 
@@ -61,7 +61,7 @@ export default function DataSciencePage() {
                 <CardTitle>Predictive Analytics</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Forecasting models for yield, weather, and market predictions.</p>
+                <p className="text-muted-foreground">Forecasting models for yield, weather, and market predictions.</p>
               </CardContent>
             </Card>
 
@@ -71,7 +71,7 @@ export default function DataSciencePage() {
                 <CardTitle>Data Visualization</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Interactive dashboards and visualization tools for data insights.</p>
+                <p className="text-muted-foreground">Interactive dashboards and visualization tools for data insights.</p>
               </CardContent>
             </Card>
           </div>
@@ -82,15 +82,15 @@ export default function DataSciencePage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Data Science Projects</h2>
+            <h2 className="text-headline text-foreground mb-8 text-center">Data Science Projects</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Agricultural AI Platform</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Agricultural AI Platform</h3>
+                <p className="text-muted-foreground mb-4">
                   Development of comprehensive AI platform integrating multiple data sources for intelligent farm management decisions.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Multi-source data integration</li>
                   <li>• Real-time analytics engine</li>
                   <li>• Automated recommendation systems</li>
@@ -99,11 +99,11 @@ export default function DataSciencePage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Yield Prediction Models</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Yield Prediction Models</h3>
+                <p className="text-muted-foreground mb-4">
                   Advanced machine learning models for accurate crop yield forecasting using weather, soil, and management data.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Deep learning neural networks</li>
                   <li>• Ensemble modeling techniques</li>
                   <li>• Real-time model updating</li>
@@ -112,11 +112,11 @@ export default function DataSciencePage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Market Intelligence System</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Market Intelligence System</h3>
+                <p className="text-muted-foreground mb-4">
                   Data-driven market analysis and price forecasting system for agricultural commodities and decision support.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Price trend analysis</li>
                   <li>• Supply and demand modeling</li>
                   <li>• Risk assessment algorithms</li>
@@ -131,8 +131,8 @@ export default function DataSciencePage() {
       {/* CTA */}
       <section className="py-16 bg-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Transform Agriculture with Data Science</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Transform Agriculture with Data Science</h2>
+          <p className="text-title mb-8">
             Partner with our data science team to unlock the power of agricultural data and analytics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

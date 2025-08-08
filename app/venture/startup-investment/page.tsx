@@ -11,8 +11,8 @@ export default function StartupInvestmentPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Rocket className="h-16 w-16 mx-auto text-orange-600 mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Startup Investment</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <h1 className="text-display text-foreground mb-6">Startup Investment</h1>
+            <p className="text-title text-muted-foreground mb-8">
               Direct equity investments in early-stage agtech companies
             </p>
             <Link href="/contact">
@@ -28,8 +28,8 @@ export default function StartupInvestmentPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Investment Focus Areas</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-headline text-foreground mb-4">Investment Focus Areas</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
               We invest in early-stage agricultural technology companies with disruptive innovations and strong growth potential.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function StartupInvestmentPage() {
                 <CardTitle>Seed Stage</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Early-stage investments in promising agricultural technology startups.</p>
+                <p className="text-muted-foreground">Early-stage investments in promising agricultural technology startups.</p>
               </CardContent>
             </Card>
 
@@ -51,7 +51,7 @@ export default function StartupInvestmentPage() {
                 <CardTitle>Series A</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Growth capital for proven agtech companies scaling their operations.</p>
+                <p className="text-muted-foreground">Growth capital for proven agtech companies scaling their operations.</p>
               </CardContent>
             </Card>
 
@@ -61,7 +61,7 @@ export default function StartupInvestmentPage() {
                 <CardTitle>Follow-on Rounds</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Continued investment in portfolio companies showing strong performance.</p>
+                <p className="text-muted-foreground">Continued investment in portfolio companies showing strong performance.</p>
               </CardContent>
             </Card>
 
@@ -71,7 +71,7 @@ export default function StartupInvestmentPage() {
                 <CardTitle>Strategic Investments</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Investments aligned with Arthur Companies' strategic business objectives.</p>
+                <p className="text-muted-foreground">Investments aligned with Arthur Companies' strategic business objectives.</p>
               </CardContent>
             </Card>
           </div>
@@ -82,15 +82,15 @@ export default function StartupInvestmentPage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Investment Criteria</h2>
+            <h2 className="text-headline text-foreground mb-8 text-center">Investment Criteria</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Technology Innovation</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Technology Innovation</h3>
+                <p className="text-muted-foreground mb-4">
                   We seek companies developing breakthrough technologies that address significant challenges in agriculture.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Novel technological approaches</li>
                   <li>• Intellectual property protection</li>
                   <li>• Scalable technology platforms</li>
@@ -99,11 +99,11 @@ export default function StartupInvestmentPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Market Opportunity</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Market Opportunity</h3>
+                <p className="text-muted-foreground mb-4">
                   Companies targeting large, growing markets with clear value propositions for agricultural stakeholders.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Significant market size and growth potential</li>
                   <li>• Clear customer pain points</li>
                   <li>• Proven market demand</li>
@@ -112,11 +112,11 @@ export default function StartupInvestmentPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Excellence</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Team Excellence</h3>
+                <p className="text-muted-foreground mb-4">
                   Strong founding teams with relevant experience, domain expertise, and the ability to execute their vision.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Experienced leadership team</li>
                   <li>• Agricultural industry knowledge</li>
                   <li>• Technical expertise</li>
@@ -131,8 +131,8 @@ export default function StartupInvestmentPage() {
       {/* CTA */}
       <section className="py-16 bg-orange-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Scale Your Agtech Startup?</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Ready to Scale Your Agtech Startup?</h2>
+          <p className="text-title mb-8">
             Partner with Arthur Companies for strategic investment and industry expertise.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

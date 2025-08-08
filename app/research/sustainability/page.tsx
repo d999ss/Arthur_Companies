@@ -11,8 +11,8 @@ export default function SustainabilityResearchPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Lightbulb className="h-16 w-16 mx-auto text-primary mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Sustainability Research</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <h1 className="text-display text-foreground mb-6">Sustainability Research</h1>
+            <p className="text-title text-muted-foreground mb-8">
               Environmental stewardship and sustainable farming practice development
             </p>
             <Link href="/contact">
@@ -28,8 +28,8 @@ export default function SustainabilityResearchPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Sustainability Focus Areas</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-headline text-foreground mb-4">Sustainability Focus Areas</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
               Our sustainability research develops environmentally responsible farming practices that protect natural resources while maintaining productivity.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function SustainabilityResearchPage() {
                 <CardTitle>Carbon Sequestration</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Research on soil carbon storage and climate change mitigation strategies.</p>
+                <p className="text-muted-foreground">Research on soil carbon storage and climate change mitigation strategies.</p>
               </CardContent>
             </Card>
 
@@ -51,7 +51,7 @@ export default function SustainabilityResearchPage() {
                 <CardTitle>Resource Efficiency</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Optimization of water, nutrient, and energy use in agricultural systems.</p>
+                <p className="text-muted-foreground">Optimization of water, nutrient, and energy use in agricultural systems.</p>
               </CardContent>
             </Card>
 
@@ -61,7 +61,7 @@ export default function SustainabilityResearchPage() {
                 <CardTitle>Emission Reduction</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Strategies to reduce greenhouse gas emissions from farming operations.</p>
+                <p className="text-muted-foreground">Strategies to reduce greenhouse gas emissions from farming operations.</p>
               </CardContent>
             </Card>
 
@@ -71,7 +71,7 @@ export default function SustainabilityResearchPage() {
                 <CardTitle>Regenerative Practices</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Development of regenerative agriculture techniques and systems.</p>
+                <p className="text-muted-foreground">Development of regenerative agriculture techniques and systems.</p>
               </CardContent>
             </Card>
           </div>
@@ -82,15 +82,15 @@ export default function SustainabilityResearchPage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sustainability Projects</h2>
+            <h2 className="text-headline text-foreground mb-8 text-center">Sustainability Projects</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Climate-Smart Agriculture Initiative</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Climate-Smart Agriculture Initiative</h3>
+                <p className="text-muted-foreground mb-4">
                   Comprehensive research program developing farming practices that adapt to climate change while reducing environmental impact.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Carbon footprint assessment and reduction</li>
                   <li>• Climate adaptation strategies</li>
                   <li>• Resilient cropping systems</li>
@@ -99,11 +99,11 @@ export default function SustainabilityResearchPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Water Conservation Research</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Water Conservation Research</h3>
+                <p className="text-muted-foreground mb-4">
                   Advanced research on water-efficient farming practices and technologies to optimize water use and protect water resources.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Precision irrigation systems</li>
                   <li>• Drought-resistant crop varieties</li>
                   <li>• Water quality monitoring</li>
@@ -112,11 +112,11 @@ export default function SustainabilityResearchPage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Biodiversity Enhancement Program</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-title text-foreground mb-4">Biodiversity Enhancement Program</h3>
+                <p className="text-muted-foreground mb-4">
                   Research on promoting biodiversity in agricultural landscapes through habitat creation and sustainable farming practices.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>• Pollinator habitat development</li>
                   <li>• Beneficial insect conservation</li>
                   <li>• Crop rotation optimization</li>
@@ -131,8 +131,8 @@ export default function SustainabilityResearchPage() {
       {/* CTA */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Lead Sustainable Agriculture Research</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-headline mb-4">Lead Sustainable Agriculture Research</h2>
+          <p className="text-title mb-8">
             Collaborate with our sustainability team to develop environmentally responsible farming solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

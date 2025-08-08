@@ -110,7 +110,7 @@
     
     /* Letter Spacing */
     --letter-spacing-tight: -0.01em;
-    --letter-spacing-normal: -0.005em;
+    --letter-spacing-normal: 0;
     --letter-spacing-wide: 0;
     
     /* ===== SPACING TOKENS ===== */
@@ -263,7 +263,7 @@
   .text-display {
     font-family: var(--font-family-display);
     font-weight: var(--font-weight-medium);
-    font-size: clamp(var(--font-size-3xl), 4vw + 0.5rem, var(--font-size-6xl));
+    font-size: clamp(var(--font-size-2xl), 4vw + 0.5rem, var(--font-size-6xl));
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
     color: hsl(var(--foreground));
@@ -412,6 +412,15 @@
   
   .animate-ticker {
     animation: ticker 60s linear infinite;
+  }
+
+  /* Mobile readability tweaks for large headings */
+  @media (max-width: 767px) {
+    .text-display,
+    .text-headline {
+      line-height: 1.2; /* slightly looser than tight (1.1) */
+      letter-spacing: -0.005em; /* looser than tight (-0.01em) */
+    }
   }
 }
 

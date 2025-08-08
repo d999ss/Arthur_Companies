@@ -63,7 +63,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-family-body)"],
+        serif: ["var(--font-family-serif)"],
         mono: ["JetBrains Mono", "monospace"],
       },
       fontSize: {

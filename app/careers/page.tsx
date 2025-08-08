@@ -73,7 +73,7 @@ export default function CareersPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="mb-8 text-balance" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "hsl(var(--foreground))"}}>
                 Careers
               </h1>
               <p className="text-body-large mb-6 max-w-2xl mx-auto">

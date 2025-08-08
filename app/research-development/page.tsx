@@ -1,8 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Lightbulb, Dna, FlaskConical, TrendingUp, Cpu, BarChart3, Building2, Users, Rocket, Target, Globe, Zap, ChevronRight } from 'lucide-react'
+import { ArrowRight, BarChart3, Building2, ChevronRight, Cpu, Dna, FlaskConical, Globe, Lightbulb, Rocket, Target, TrendingUp, Users, Zap } from 'lucide-react'
+import Link from "next/link"
 
 export default function ResearchDevelopmentPage() {
   return (
@@ -16,7 +16,7 @@ export default function ResearchDevelopmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="mb-8 text-balance" style={{ fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "hsl(var(--foreground))" }}>
                 Research & Development
               </h1>
               <p className="text-body-large mb-8 max-w-2xl mx-auto">
@@ -25,7 +25,7 @@ export default function ResearchDevelopmentPage() {
               <p className="text-body mb-12 max-w-3xl mx-auto text-muted-foreground">
                 Our R&D initiatives focus on solving agriculture's most pressing challenges through scientific innovation, technology development, and strategic partnerships.
               </p>
-              
+
               {/* Quick Navigation */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
                 <a href="#research" className="btn-primary">
@@ -37,7 +37,7 @@ export default function ResearchDevelopmentPage() {
                   Venture
                 </a>
               </div>
-              
+
               {/* Value Proposition */}
               <div className="grid md:grid-cols-2 gap-8 text-left">
                 <div className="p-6 card-refined">
@@ -46,7 +46,7 @@ export default function ResearchDevelopmentPage() {
                   </div>
                   <h3 className="text-title mb-3">Research Excellence</h3>
                   <p className="text-body text-muted-foreground">
-                    Leading-edge agricultural research in crop genetics, soil science, 
+                    Leading-edge agricultural research in crop genetics, soil science,
                     precision agriculture, and sustainable farming practices.
                   </p>
                 </div>
@@ -56,7 +56,7 @@ export default function ResearchDevelopmentPage() {
                   </div>
                   <h3 className="text-title mb-3">Strategic Investment</h3>
                   <p className="text-body text-muted-foreground">
-                    Venture capital and strategic partnerships with innovative agtech 
+                    Venture capital and strategic partnerships with innovative agtech
                     companies transforming the agricultural landscape.
                   </p>
                 </div>
@@ -81,10 +81,10 @@ export default function ResearchDevelopmentPage() {
             </div>
             <h2 className="text-headline mb-6">Research</h2>
             <p className="text-body-large max-w-3xl mx-auto mb-12">
-              Our research division conducts cutting-edge agricultural science to solve 
+              Our research division conducts cutting-edge agricultural science to solve
               industry challenges and unlock new opportunities for sustainable farming.
             </p>
-            
+
             {/* Research Categories Overview */}
             <div className="grid md:grid-cols-3 gap-6 mb-16">
               {[
@@ -93,7 +93,7 @@ export default function ResearchDevelopmentPage() {
                   description: "Advanced research in plant genetics, breeding, and biotechnology to develop next-generation crop varieties"
                 },
                 {
-                  title: "Digital Agriculture", 
+                  title: "Digital Agriculture",
                   description: "Development of digital tools and platforms to enhance farm management and decision-making processes"
                 },
                 {
@@ -109,7 +109,7 @@ export default function ResearchDevelopmentPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="p-4 bg-background rounded-xl"
                 >
-                  <h4 className="text-body-medium font-semibold mb-2">{category.title}</h4>
+                  <h4 className="text-title mb-2">{category.title}</h4>
                   <p className="text-small text-muted-foreground">{category.description}</p>
                 </motion.div>
               ))}
@@ -165,8 +165,8 @@ export default function ResearchDevelopmentPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Link 
-                    href={service.link}
+                  <Link
+                    href={service.link as any}
                     className="group block p-6 card-refined hover-lift"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -205,10 +205,10 @@ export default function ResearchDevelopmentPage() {
             </div>
             <h2 className="text-headline mb-6">Venture</h2>
             <p className="text-body-large max-w-3xl mx-auto mb-12">
-              Our venture platform invests in and partners with innovative agtech companies 
+              Our venture platform invests in and partners with innovative agtech companies
               that are transforming agriculture through breakthrough technologies and business models.
             </p>
-            
+
             {/* Venture Categories Overview */}
             <div className="grid md:grid-cols-3 gap-6 mb-16">
               {[
@@ -233,7 +233,7 @@ export default function ResearchDevelopmentPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="p-4 bg-secondary/20 rounded-xl"
                 >
-                  <h4 className="text-body-medium font-semibold mb-2">{category.title}</h4>
+                  <h4 className="text-title mb-2">{category.title}</h4>
                   <p className="text-small text-muted-foreground">{category.description}</p>
                 </motion.div>
               ))}
@@ -289,8 +289,8 @@ export default function ResearchDevelopmentPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Link 
-                    href={service.link}
+                  <Link
+                    href={service.link as any}
                     className="group block p-6 card-refined hover-lift"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -326,7 +326,7 @@ export default function ResearchDevelopmentPage() {
           >
             <h2 className="text-headline mb-6">Current portfolio companies</h2>
             <p className="text-body-large max-w-3xl mx-auto">
-              Our diverse portfolio of innovative companies is transforming agriculture 
+              Our diverse portfolio of innovative companies is transforming agriculture
               across the value chain.
             </p>
           </motion.div>
@@ -401,11 +401,11 @@ export default function ResearchDevelopmentPage() {
           >
             <h2 className="text-headline mb-6 text-background">Research-driven investment strategy</h2>
             <p className="text-body-large max-w-3xl mx-auto opacity-90">
-              Our unique approach combines scientific research with strategic investment 
+              Our unique approach combines scientific research with strategic investment
               to accelerate agricultural innovation and create lasting impact.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -416,10 +416,10 @@ export default function ResearchDevelopmentPage() {
             >
               <h3 className="text-title mb-3 text-background">From Lab to Market</h3>
               <p className="text-body opacity-90 mb-6">
-                Our research discoveries inform our investment decisions, ensuring we back 
+                Our research discoveries inform our investment decisions, ensuring we back
                 technologies with proven scientific foundations.
               </p>
-              <Link 
+              <Link
                 href="/contact"
                 className="inline-flex items-center px-4 py-2 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
               >
@@ -435,10 +435,10 @@ export default function ResearchDevelopmentPage() {
             >
               <h3 className="text-title mb-3 text-background">Investment to Innovation</h3>
               <p className="text-body opacity-90 mb-6">
-                Our portfolio companies gain access to our research capabilities, 
+                Our portfolio companies gain access to our research capabilities,
                 accelerating their development and market success.
               </p>
-              <Link 
+              <Link
                 href="/contact"
                 className="inline-flex items-center px-4 py-2 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
               >
@@ -461,7 +461,7 @@ export default function ResearchDevelopmentPage() {
             >
               <h2 className="text-headline mb-6">Shape the future of agriculture</h2>
               <p className="text-body-large mb-12 text-muted-foreground">
-                Whether you're a researcher, entrepreneur, or investor, join us in advancing 
+                Whether you're a researcher, entrepreneur, or investor, join us in advancing
                 agricultural innovation through cutting-edge research and strategic partnerships.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">

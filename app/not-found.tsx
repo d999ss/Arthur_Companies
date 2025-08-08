@@ -17,7 +17,7 @@ export default function NotFound() {
     <div className="min-h-[60vh] flex items-center justify-center px-4">
       <div className="text-center max-w-md mx-auto">
         <div className="mb-8">
-          <h1 className="text-display text-primary mb-4">404</h1>
+          <h1 className="text-primary mb-4" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "hsl(var(--primary))"}}>404</h1>
           <h2 className="text-headline mb-4">Page Not Found</h2>
           <p className="text-body text-muted-foreground mb-8">
             The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.

@@ -1,11 +1,11 @@
-import type { Metadata, Viewport } from 'next'
-import './globals.css'
-import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import { Providers } from '@/lib/providers'
-import { Toaster } from '@/components/toaster'
-import { styreneA, styreneB, tiempos, garamond } from '@/lib/fonts'
+import { Header } from '@/components/header'
 import { StructuredData, organizationSchema } from '@/components/structured-data'
+import { Toaster } from '@/components/toaster'
+import { Providers } from '@/lib/providers'
+import type { Metadata, Viewport } from 'next'
+import { itcGaramond } from './fonts'
+import './globals.css'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -79,14 +79,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
   }
 
   return (
-    <html lang="en" suppressHydrationWarning className={`${styreneA.variable} ${styreneB.variable} ${tiempos.variable} ${garamond.variable}`}>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        {/* Preload critical fonts */}
+        <link rel="preload" href="/itc-garamond-std.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+        <link rel="preload" href="/__styreneB_57fc85-normal-400-100.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
       </head>
-      <body className="min-h-screen bg-background font-sans antialiased">
+      <body className={`min-h-screen bg-background font-sans antialiased ${itcGaramond.variable}`}>
         <Providers>
           <StructuredData data={organizationSchema} />
           <div className="relative flex min-h-screen flex-col">

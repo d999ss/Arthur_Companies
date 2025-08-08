@@ -1,9 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { ChevronDown, Menu, X } from "lucide-react"
 import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, X, Menu } from "lucide-react"
+import { useState } from "react"
 import { FuturesHeaderBanner } from './futures-ticker'
 
 const navigationData = {
@@ -13,44 +13,44 @@ const navigationData = {
       {
         category: "Core Services",
         links: [
-          { 
-            href: "/grain", 
-            label: "Grain Marketing", 
+          {
+            href: "/grain",
+            label: "Grain Marketing",
             description: "Real-time cash bids and strategic marketing",
             icon: "🌾"
           },
-          { 
-            href: "/services/agronomy", 
-            label: "Agronomy", 
+          {
+            href: "/services/agronomy",
+            label: "Agronomy",
             description: "Expert crop nutrition and soil health guidance",
             icon: "🧪"
           },
-          { 
-            href: "/services/precision-agriculture", 
-            label: "Precision Agriculture", 
+          {
+            href: "/services/precision-agriculture",
+            label: "Precision Agriculture",
             description: "Data-driven technology solutions",
             icon: "🛰️"
           },
         ]
       },
       {
-        category: "Specialized Solutions", 
+        category: "Specialized Solutions",
         links: [
-          { 
-            href: "/services/specialty-crops", 
-            label: "Specialty Crops", 
+          {
+            href: "/services/specialty-crops",
+            label: "Specialty Crops",
             description: "Identity-preserved grain handling",
             icon: "🌿"
           },
-          { 
-            href: "/services/wholesale-fertilizer", 
-            label: "Wholesale Fertilizer", 
+          {
+            href: "/services/wholesale-fertilizer",
+            label: "Wholesale Fertilizer",
             description: "Comprehensive nutrient programs",
             icon: "⚗️"
           },
-          { 
-            href: "/services/soil-health", 
-            label: "Soil Health", 
+          {
+            href: "/services/soil-health",
+            label: "Soil Health",
             description: "Sustainable farming practices",
             icon: "🌱"
           },
@@ -64,21 +64,21 @@ const navigationData = {
       {
         category: "Innovation",
         links: [
-          { 
-            href: "/research-development", 
-            label: "R&D Overview", 
+          {
+            href: "/research-development",
+            label: "R&D Overview",
             description: "Our research initiatives",
             icon: "🔬"
           },
-          { 
-            href: "/research/crop-genetics", 
-            label: "Crop Genetics", 
+          {
+            href: "/research/crop-genetics",
+            label: "Crop Genetics",
             description: "Advanced genetic research",
             icon: "🧬"
           },
-          { 
-            href: "/research/sustainability", 
-            label: "Sustainability", 
+          {
+            href: "/research/sustainability",
+            label: "Sustainability",
             description: "Environmental stewardship",
             icon: "🌍"
           },
@@ -87,15 +87,15 @@ const navigationData = {
       {
         category: "Technology",
         links: [
-          { 
-            href: "/research/data-science", 
-            label: "Data Science", 
+          {
+            href: "/research/data-science",
+            label: "Data Science",
             description: "Agricultural data analytics",
             icon: "📊"
           },
-          { 
-            href: "/research/precision-agriculture", 
-            label: "Precision Tech", 
+          {
+            href: "/research/precision-agriculture",
+            label: "Precision Tech",
             description: "Cutting-edge farming technology",
             icon: "🤖"
           },
@@ -110,7 +110,7 @@ export function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-  
+
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key)
   }
@@ -119,17 +119,17 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Futures Banner */}
       <FuturesHeaderBanner />
-      
+
       {/* Main Navigation */}
       <div className="bg-background/80 backdrop-blur-md border-b border-border/10">
         <div className="container h-20">
           <div className="flex items-center justify-between h-full">
             {/* Logo */}
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="flex items-center group"
             >
-              <span className="text-xl font-bold tracking-tight text-foreground font-[var(--font-styrene-a)]">
+              <span className="text-xl font-bold tracking-tight text-foreground">
                 Arthur Companies
               </span>
             </Link>
@@ -148,11 +148,10 @@ export function Header() {
                   className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
                   Services
-                  <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${
-                    activeDropdown === 'services' ? 'rotate-180' : ''
-                  }`} />
+                  <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''
+                    }`} />
                 </button>
-                
+
                 <AnimatePresence>
                   {activeDropdown === 'services' && (
                     <motion.div
@@ -174,7 +173,7 @@ export function Header() {
                               {category.links.map((link) => (
                                 <Link
                                   key={link.href}
-                                  href={link.href}
+                                  href={link.href as any}
                                   className="block group"
                                   onClick={() => setActiveDropdown(null)}
                                 >
@@ -207,11 +206,10 @@ export function Header() {
                   className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
                   Research
-                  <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${
-                    activeDropdown === 'research' ? 'rotate-180' : ''
-                  }`} />
+                  <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${activeDropdown === 'research' ? 'rotate-180' : ''
+                    }`} />
                 </button>
-                
+
                 <AnimatePresence>
                   {activeDropdown === 'research' && (
                     <motion.div
@@ -233,7 +231,7 @@ export function Header() {
                               {category.links.map((link) => (
                                 <Link
                                   key={link.href}
-                                  href={link.href}
+                                  href={link.href as any}
                                   className="block group"
                                   onClick={() => setActiveDropdown(null)}
                                 >
@@ -272,8 +270,8 @@ export function Header() {
 
               {/* CTA Button */}
               <div className="flex items-center gap-3 ml-4">
-                <Link 
-                  href="/grain" 
+                <Link
+                  href="/grain"
                   className="btn-primary"
                 >
                   Cash Bids
@@ -305,7 +303,7 @@ export function Header() {
               className="fixed inset-0 bg-background/95 backdrop-blur-sm lg:hidden"
               onClick={toggleMenu}
             />
-            
+
             {/* Mobile Menu */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -319,8 +317,8 @@ export function Header() {
                 <nav className="space-y-6">
                   {/* Grain Link */}
                   <div>
-                    <Link 
-                      href="/grain" 
+                    <Link
+                      href="/grain"
                       onClick={toggleMenu}
                       className="block text-base font-medium text-foreground hover:text-primary transition-colors"
                     >
@@ -335,11 +333,10 @@ export function Header() {
                       className="flex items-center justify-between w-full text-left text-base font-medium text-foreground mb-3"
                     >
                       Services
-                      <ChevronDown className={`h-4 w-4 transition-transform ${
-                        activeDropdown === 'services' ? 'rotate-180' : ''
-                      }`} />
+                      <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''
+                        }`} />
                     </button>
-                    
+
                     <AnimatePresence>
                       {activeDropdown === 'services' && (
                         <motion.div
@@ -357,7 +354,7 @@ export function Header() {
                                 {category.links.map((link) => (
                                   <Link
                                     key={link.href}
-                                    href={link.href}
+                                    href={link.href as any}
                                     onClick={toggleMenu}
                                     className="block"
                                   >
@@ -389,11 +386,10 @@ export function Header() {
                       className="flex items-center justify-between w-full text-left text-base font-medium text-foreground mb-3"
                     >
                       Research
-                      <ChevronDown className={`h-4 w-4 transition-transform ${
-                        activeDropdown === 'research' ? 'rotate-180' : ''
-                      }`} />
+                      <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'research' ? 'rotate-180' : ''
+                        }`} />
                     </button>
-                    
+
                     <AnimatePresence>
                       {activeDropdown === 'research' && (
                         <motion.div
@@ -411,7 +407,7 @@ export function Header() {
                                 {category.links.map((link) => (
                                   <Link
                                     key={link.href}
-                                    href={link.href}
+                                    href={link.href as any}
                                     onClick={toggleMenu}
                                     className="block"
                                   >
@@ -438,22 +434,22 @@ export function Header() {
 
                   {/* Simple Links */}
                   <div className="space-y-3">
-                    <Link 
-                      href="/about" 
+                    <Link
+                      href="/about"
                       onClick={toggleMenu}
                       className="block text-base font-medium text-foreground hover:text-primary transition-colors"
                     >
                       About
                     </Link>
-                    <Link 
-                      href="/careers" 
+                    <Link
+                      href="/careers"
                       onClick={toggleMenu}
                       className="block text-base font-medium text-foreground hover:text-primary transition-colors"
                     >
                       Careers
                     </Link>
-                    <Link 
-                      href="/contact" 
+                    <Link
+                      href="/contact"
                       onClick={toggleMenu}
                       className="block text-base font-medium text-foreground hover:text-primary transition-colors"
                     >
@@ -463,8 +459,8 @@ export function Header() {
 
                   {/* Mobile CTA */}
                   <div className="pt-4 border-t border-border/20">
-                    <Link 
-                      href="/grain" 
+                    <Link
+                      href="/grain"
                       onClick={toggleMenu}
                       className="btn-primary w-full justify-center"
                     >

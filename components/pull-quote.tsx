@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Quote } from 'lucide-react'
+
 
 interface PullQuoteProps {
   quote: string
@@ -12,19 +12,19 @@ interface PullQuoteProps {
   className?: string
 }
 
-export function PullQuote({ 
-  quote, 
-  author, 
-  title, 
-  company, 
+export function PullQuote({
+  quote,
+  author,
+  title,
+  company,
   variant = 'default',
-  className = '' 
+  className = ''
 }: PullQuoteProps) {
-  const baseClasses = variant === 'large' 
+  const baseClasses = variant === 'large'
     ? 'py-12 px-8 lg:py-16 lg:px-12'
     : variant === 'centered'
-    ? 'py-8 px-6 text-center'
-    : 'py-6 px-6'
+      ? 'py-8 px-6 text-center'
+      : 'py-6 px-6'
 
   return (
     <motion.div
@@ -40,8 +40,8 @@ export function PullQuote({
       {/* Quote Text - Exact Anthropic Style */}
       <blockquote className={`
         font-normal text-card-foreground leading-relaxed mb-6
-        ${variant === 'large' 
-          ? 'text-2xl lg:text-3xl' 
+        ${variant === 'large'
+          ? 'text-2xl lg:text-3xl'
           : 'text-xl lg:text-2xl'
         }
         ${variant === 'centered' ? 'text-center' : ''}
@@ -62,7 +62,7 @@ export function PullQuote({
 }
 
 // Testimonial Grid Component
-export function TestimonialGrid({ testimonials }: { 
+export function TestimonialGrid({ testimonials }: {
   testimonials: Array<{
     quote: string
     author: string
@@ -83,8 +83,8 @@ export function TestimonialGrid({ testimonials }: {
           <PullQuote
             quote={testimonial.quote}
             author={testimonial.author}
-            title={testimonial.title}
-            company={testimonial.company}
+            {...(testimonial.title && { title: testimonial.title })}
+            {...(testimonial.company && { company: testimonial.company })}
           />
         </motion.div>
       ))}

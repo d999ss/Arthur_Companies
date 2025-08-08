@@ -19,7 +19,7 @@ export default function AgronomyPage() {
               <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full mx-auto mb-8 flex items-center justify-center">
                 <Sprout className="h-10 w-10 text-primary" />
               </div>
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="mb-8 text-balance" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "hsl(var(--foreground))"}}>
                 Agronomy Excellence
               </h1>
               <p className="text-body-large mb-12 max-w-2xl mx-auto">

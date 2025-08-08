@@ -11,7 +11,7 @@ export default function CorporateVenturesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Building2 className="h-16 w-16 mx-auto text-blue-600 mb-6" />
-            <h1 className="text-display text-foreground mb-6">Corporate Ventures</h1>
+            <h1 className="text-foreground mb-6" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "hsl(var(--foreground))"}}>Corporate Ventures</h1>
             <p className="text-title text-muted-foreground mb-8">
               Strategic partnerships and joint ventures with established companies
             </p>

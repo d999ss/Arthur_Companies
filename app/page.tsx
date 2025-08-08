@@ -48,7 +48,7 @@ export default function HomePage() {
                 variants={fadeIn}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <h1 className="text-display mb-2 text-balance">
+                <h1 className="mb-2 text-balance" style={{ fontFamily: "var(--font-itc-garamond), Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "#1a1a1a" }}>
                   Arthur: Where Innovation Grows,{" "}
                   <span className="text-primary italic">From the Ground Up.</span>
                 </h1>
@@ -67,7 +67,7 @@ export default function HomePage() {
               </motion.div>
             ) : (
               <div>
-                <h1 className="text-display mb-2 text-balance">
+                <h1 className="mb-2 text-balance" style={{ fontFamily: "var(--font-itc-garamond), Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "#1a1a1a" }}>
                   Arthur: Where Innovation Grows,{" "}
                   <span className="text-primary italic">From the Ground Up.</span>
                 </h1>

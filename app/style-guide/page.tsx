@@ -1,8 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, ChevronRight, Palette, Type, Layout, Camera } from 'lucide-react'
+import { ArrowRight, Camera, ChevronRight, Layout, Palette, Type } from 'lucide-react'
+import Link from "next/link"
 
 export default function StyleGuidePage() {
   return (
@@ -21,10 +21,10 @@ export default function StyleGuidePage() {
               </div>
               <h1 className="text-display mb-8 text-balance">
                 Arthur Companies{" "}
-                <span className="text-serif-large text-primary italic">Style Guide.</span>
+                <span className="text-title text-primary italic">Style Guide.</span>
               </h1>
               <p className="text-body-large mb-12 max-w-2xl mx-auto">
-                A comprehensive guide to our design system, inspired by Anthropic's refined aesthetic 
+                A comprehensive guide to our design system, inspired by Anthropic's refined aesthetic
                 and adapted for agricultural excellence.
               </p>
             </motion.div>
@@ -44,7 +44,7 @@ export default function StyleGuidePage() {
           >
             <h2 className="text-headline mb-6">Color Palette</h2>
             <p className="text-body-large max-w-3xl mb-12">
-              Our colors are directly inspired by Anthropic's sophisticated palette, 
+              Our colors are directly inspired by Anthropic's sophisticated palette,
               creating a clean, trustworthy, and professional aesthetic.
             </p>
           </motion.div>
@@ -165,8 +165,8 @@ export default function StyleGuidePage() {
           >
             <h2 className="text-headline mb-6">Typography</h2>
             <p className="text-body-large max-w-3xl mb-12">
-              Our typography system uses Styrene A for headings, Styrene B for body text, 
-              and Tiempos Text for serif emphasis and quotes.
+              Our typography system uses ITC Garamond Std for all display, headlines, and titles,
+              Styrene B for body text, and Tiempos Text for serif emphasis and quotes.
             </p>
           </motion.div>
 
@@ -179,11 +179,11 @@ export default function StyleGuidePage() {
               transition={{ duration: 0.6 }}
               className="p-6 card-refined"
             >
-              <h3 className="text-title mb-4" style={{fontFamily: 'Styrene A, sans-serif'}}>Styrene A</h3>
-              <p className="text-body mb-4">Used for all headings and display text. Medium weight (500) with tight letter spacing for impact.</p>
+              <h3 className="text-title mb-4">ITC Garamond Std</h3>
+              <p className="text-body mb-4">Used for all display, headlines, and titles. Medium weight (500) with tight letter spacing for elegant impact.</p>
               <div className="text-small text-muted-foreground">
                 <p>Font-weight: 500</p>
-                <p>Letter-spacing: -0.025em</p>
+                <p>Letter-spacing: -0.01em</p>
                 <p>Line-height: 1.1</p>
               </div>
             </motion.div>
@@ -195,7 +195,7 @@ export default function StyleGuidePage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="p-6 card-refined"
             >
-              <h3 className="text-title mb-4" style={{fontFamily: 'Styrene B, sans-serif'}}>Styrene B</h3>
+              <h3 className="text-title mb-4">Styrene B</h3>
               <p className="text-body mb-4">Used for body text, buttons, and interface elements. Regular weight (400) with excellent readability.</p>
               <div className="text-small text-muted-foreground">
                 <p>Font-weight: 400</p>
@@ -211,7 +211,7 @@ export default function StyleGuidePage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="p-6 card-refined"
             >
-              <h3 className="text-title mb-4" style={{fontFamily: 'Tiempos Text, serif'}}>Tiempos Text</h3>
+              <h3 className="text-title mb-4">Tiempos Text</h3>
               <p className="text-body mb-4">Used for quotes, emphasis, and special moments. Adds warmth and sophistication to key messages.</p>
               <div className="text-small text-muted-foreground">
                 <p>Font-weight: 400</p>
@@ -231,26 +231,26 @@ export default function StyleGuidePage() {
               className="p-8 card-refined"
             >
               <h3 className="text-title mb-6">Typography Scale</h3>
-              
+
               <div className="space-y-6">
                 <div className="border-b border-border pb-6">
                   <h1 className="text-display mb-2">Display Heading</h1>
                   <p className="text-small text-muted-foreground">
-                    .text-display • Used for hero headlines • 3rem-4.5rem responsive • Styrene A Medium
+                    .text-display • Used for hero headlines • 3rem-4.5rem responsive • ITC Garamond Std Medium
                   </p>
                 </div>
 
                 <div className="border-b border-border pb-6">
                   <h2 className="text-headline mb-2">Section Headline</h2>
                   <p className="text-small text-muted-foreground">
-                    .text-headline • Used for section headings • 2rem-2.75rem responsive • Styrene A Medium
+                    .text-headline • Used for section headings • 2rem-2.75rem responsive • ITC Garamond Std Medium
                   </p>
                 </div>
 
                 <div className="border-b border-border pb-6">
                   <h3 className="text-title mb-2">Content Title</h3>
                   <p className="text-small text-muted-foreground">
-                    .text-title • Used for subsections • 1.25rem-1.75rem responsive • Styrene A Medium
+                    .text-title • Used for subsections • 1.25rem-1.75rem responsive • ITC Garamond Std Medium
                   </p>
                 </div>
 
@@ -276,7 +276,7 @@ export default function StyleGuidePage() {
                 </div>
 
                 <div>
-                  <p className="text-serif-large text-primary italic mb-2">Serif Emphasis</p>
+                  <p className="text-serif-large mb-2">Serif Emphasis</p>
                   <p className="text-small text-muted-foreground">
                     .text-serif-large • Used for quotes and special emphasis • Tiempos Text Regular
                   </p>
@@ -364,7 +364,7 @@ export default function StyleGuidePage() {
             <h3 className="text-title mb-6">Layout System</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <h4 className="text-body-medium mb-3">Spacing</h4>
+                <h4 className="text-title mb-3">Spacing</h4>
                 <ul className="space-y-2 text-small text-muted-foreground">
                   <li><code>.section-y</code> - 4rem top/bottom padding</li>
                   <li><code>.section-y-large</code> - 5rem top/bottom padding</li>
@@ -373,7 +373,7 @@ export default function StyleGuidePage() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-body-medium mb-3">Animations</h4>
+                <h4 className="text-title mb-3">Animations</h4>
                 <ul className="space-y-2 text-small text-muted-foreground">
                   <li><code>.hover-lift</code> - Subtle hover elevation</li>
                   <li><code>.transition-smooth</code> - 300ms ease-out</li>
@@ -382,7 +382,7 @@ export default function StyleGuidePage() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-body-medium mb-3">Responsive</h4>
+                <h4 className="text-title mb-3">Responsive</h4>
                 <ul className="space-y-2 text-small text-muted-foreground">
                   <li>Mobile-first approach</li>
                   <li>Fluid typography scaling</li>
@@ -470,12 +470,316 @@ export default function StyleGuidePage() {
                 { emoji: "🌱", label: "Soil Health" },
                 { emoji: "🔬", label: "Research" },
                 { emoji: "🧬", label: "Genetics" }
-              ].map((icon, index) => (
+              ].map((icon) => (
                 <div key={icon.label} className="text-center p-4 bg-secondary/50 rounded-lg">
                   <div className="text-2xl mb-2">{icon.emoji}</div>
                   <p className="text-small text-muted-foreground">{icon.label}</p>
                 </div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Design Token System */}
+      <section className="section-y-large">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-headline mb-6">Design Token System</h2>
+            <p className="text-body-large max-w-3xl mx-auto">
+              Our comprehensive design token system ensures consistency across all components and pages.
+              All design values are centralized as CSS custom properties for easy maintenance and theming.
+            </p>
+          </motion.div>
+
+          {/* Color Tokens */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <h3 className="text-title mb-8 text-center">Color Tokens</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Brand Colors</h4>
+                <div className="space-y-2 text-small">
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-primary rounded"></div>
+                    <code>--color-brand-primary</code>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-secondary rounded"></div>
+                    <code>--color-brand-secondary</code>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-accent rounded"></div>
+                    <code>--color-brand-accent</code>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Semantic Colors</h4>
+                <div className="space-y-2 text-small">
+                  <div><code>--color-background</code></div>
+                  <div><code>--color-foreground</code></div>
+                  <div><code>--color-primary</code></div>
+                  <div><code>--color-secondary</code></div>
+                  <div><code>--color-muted</code></div>
+                  <div><code>--color-border</code></div>
+                </div>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Usage</h4>
+                <div className="space-y-2 text-small">
+                  <code className="block bg-muted p-2 rounded">
+                    hsl(var(--color-primary))
+                  </code>
+                  <code className="block bg-muted p-2 rounded">
+                    hsl(var(--color-background))
+                  </code>
+                  <code className="block bg-muted p-2 rounded">
+                    hsl(var(--color-foreground))
+                  </code>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Typography Tokens */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-16"
+          >
+            <h3 className="text-title mb-8 text-center">Typography Tokens</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Font Families</h4>
+                <div className="space-y-2 text-small">
+                  <div><code>--font-family-display</code></div>
+                  <div><code>--font-family-body</code></div>
+                  <div><code>--font-family-serif</code></div>
+                </div>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Font Sizes</h4>
+                <div className="space-y-2 text-small">
+                  <div><code>--font-size-xs</code> (12px)</div>
+                  <div><code>--font-size-sm</code> (14px)</div>
+                  <div><code>--font-size-base</code> (16px)</div>
+                  <div><code>--font-size-lg</code> (18px)</div>
+                  <div><code>--font-size-xl</code> (20px)</div>
+                  <div><code>--font-size-2xl</code> (24px)</div>
+                </div>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Typography Classes</h4>
+                <div className="space-y-2 text-small">
+                  <div><code>.text-display</code> - Hero headlines (3rem-4.5rem)</div>
+                  <div><code>.text-headline</code> - Section headings (2rem-2.75rem)</div>
+                  <div><code>.text-title</code> - Subsections (1.25rem-1.75rem)</div>
+                  <div><code>.text-body-large</code> - Important paragraphs (1.125rem-1.25rem)</div>
+                  <div><code>.text-body</code> - Standard content (1rem)</div>
+                  <div><code>.text-small</code> - Captions and metadata (0.875rem)</div>
+                  <div><code>.text-serif-large</code> - Quotes and emphasis (1.5rem-2rem)</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Spacing & Layout Tokens */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-16"
+          >
+            <h3 className="text-title mb-8 text-center">Spacing & Layout Tokens</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Spacing Scale</h4>
+                <div className="space-y-2 text-small">
+                  <div><code>--spacing-1</code> (4px)</div>
+                  <div><code>--spacing-2</code> (8px)</div>
+                  <div><code>--spacing-4</code> (16px)</div>
+                  <div><code>--spacing-8</code> (32px)</div>
+                  <div><code>--spacing-16</code> (64px)</div>
+                  <div><code>--spacing-32</code> (128px)</div>
+                </div>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Border Radius</h4>
+                <div className="space-y-2 text-small">
+                  <div><code>--radius-sm</code> (4px)</div>
+                  <div><code>--radius-md</code> (6px)</div>
+                  <div><code>--radius-lg</code> (8px)</div>
+                  <div><code>--radius-xl</code> (12px)</div>
+                  <div><code>--radius-2xl</code> (16px)</div>
+                  <div><code>--radius-full</code></div>
+                </div>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Shadows</h4>
+                <div className="space-y-2 text-small">
+                  <div><code>--shadow-sm</code></div>
+                  <div><code>--shadow-md</code></div>
+                  <div><code>--shadow-lg</code></div>
+                  <div><code>--shadow-xl</code></div>
+                  <div><code>--shadow-brand</code></div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Animation Tokens */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mb-16"
+          >
+            <h3 className="text-title mb-8 text-center">Animation Tokens</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Durations</h4>
+                <div className="space-y-2 text-small">
+                  <div><code>--duration-fast</code> (150ms)</div>
+                  <div><code>--duration-normal</code> (200ms)</div>
+                  <div><code>--duration-slow</code> (300ms)</div>
+                  <div><code>--duration-slower</code> (500ms)</div>
+                </div>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">Easing Functions</h4>
+                <div className="space-y-2 text-small">
+                  <div><code>--ease-linear</code></div>
+                  <div><code>--ease-in</code></div>
+                  <div><code>--ease-out</code></div>
+                  <div><code>--ease-in-out</code></div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Usage Examples */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-16"
+          >
+            <h3 className="text-title mb-8 text-center">Usage Examples</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-4">CSS Usage</h4>
+                <pre className="text-small bg-muted p-4 rounded overflow-x-auto">
+                  {`/* Using color tokens */
+background-color: hsl(var(--color-primary));
+color: hsl(var(--color-foreground));
+
+/* Using spacing tokens */
+padding: var(--spacing-4);
+margin: var(--spacing-8);
+
+/* Using typography tokens */
+font-family: var(--font-family-display);
+font-size: var(--font-size-2xl);
+
+/* Using animation tokens */
+transition: all var(--duration-normal) var(--ease-out);`}
+                </pre>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-4">Typography Classes</h4>
+                <div className="space-y-4">
+                  <div>
+                    <h1 className="text-display">Display Heading</h1>
+                    <code className="text-small">.text-display</code>
+                  </div>
+                  <div>
+                    <h2 className="text-headline">Section Headline</h2>
+                    <code className="text-small">.text-headline</code>
+                  </div>
+                  <div>
+                    <h3 className="text-title">Content Title</h3>
+                    <code className="text-small">.text-title</code>
+                  </div>
+                  <div>
+                    <p className="text-body-large">Large body text for important content.</p>
+                    <code className="text-small">.text-body-large</code>
+                  </div>
+                  <div>
+                    <p className="text-body">Regular body text for standard content.</p>
+                    <code className="text-small">.text-body</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Best Practices */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mb-16"
+          >
+            <h3 className="text-title mb-8 text-center">Best Practices</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">✅ Do</h4>
+                <ul className="space-y-2 text-small text-muted-foreground">
+                  <li>• Use semantic color tokens</li>
+                  <li>• Apply typography classes</li>
+                  <li>• Use spacing tokens consistently</li>
+                  <li>• Leverage animation tokens</li>
+                  <li>• Test in both light and dark modes</li>
+                </ul>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">❌ Don't</h4>
+                <ul className="space-y-2 text-small text-muted-foreground">
+                  <li>• Hardcode color values</li>
+                  <li>• Use arbitrary font sizes</li>
+                  <li>• Skip spacing tokens</li>
+                  <li>• Ignore animation consistency</li>
+                  <li>• Forget accessibility</li>
+                </ul>
+              </div>
+
+              <div className="p-6 card-refined">
+                <h4 className="text-body font-medium mb-3">🔧 Adding Tokens</h4>
+                <ul className="space-y-2 text-small text-muted-foreground">
+                  <li>• Add to appropriate section in :root</li>
+                  <li>• Document in this style guide</li>
+                  <li>• Update related components</li>
+                  <li>• Test across screen sizes</li>
+                  <li>• Verify theme compatibility</li>
+                </ul>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -495,7 +799,7 @@ export default function StyleGuidePage() {
             <div className="text-serif text-body-large mb-8 text-muted-foreground italic">
               "Consistency is the hallmark of great design systems."
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
               <div className="p-6 card-refined">
                 <h3 className="text-title mb-4">Design Tokens</h3>
@@ -503,8 +807,11 @@ export default function StyleGuidePage() {
                   All colors, typography, and spacing use CSS custom properties for easy theme management and consistency.
                 </p>
                 <code className="text-small bg-foreground text-background px-2 py-1 rounded">
-                  hsl(var(--primary))
+                  hsl(var(--color-primary))
                 </code>
+                <p className="text-small text-muted-foreground mt-2">
+                  See docs/DESIGN-TOKENS.md for complete documentation
+                </p>
               </div>
 
               <div className="p-6 card-refined">

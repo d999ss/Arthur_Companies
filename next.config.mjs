@@ -17,18 +17,19 @@ const nextConfig = {
   // ESLint will now run during builds to catch issues
   // TypeScript errors will be caught during builds
   // We'll fix errors before removing this temporarily
+  // TypeScript errors will now be caught during builds
   typescript: {
-    ignoreBuildErrors: true, // TODO: Remove after fixing TS errors
+    // Strict type checking is now enabled
   },
   headers: async () => [
     {
       source: '/(.*)',
       headers: [
-        // Temporarily commenting out nosniff header to troubleshoot MIME type issues
-        // {
-        //   key: 'X-Content-Type-Options',
-        //   value: 'nosniff',
-        // },
+        // Security header restored after resolving MIME type issues
+        {
+          key: 'X-Content-Type-Options',
+          value: 'nosniff',
+        },
         {
           key: 'X-Frame-Options',
           value: 'DENY',

@@ -15,7 +15,7 @@ export default function HistoryPage() {
         <section className="bg-gradient-to-br from-amber-50 to-orange-100 py-20 lg:py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-display text-foreground mb-6">Our History</h1>
+              <h1 className="text-foreground mb-6" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em"}}>Our History</h1>
               <p className="text-title text-muted-foreground">Loading company history...</p>
             </div>
           </div>
@@ -31,7 +31,7 @@ export default function HistoryPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <AlertCircle className="h-16 w-16 text-red-500 mx-auto mb-4" />
-              <h1 className="text-display text-foreground mb-6">Error Loading History</h1>
+              <h1 className="text-foreground mb-6" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em"}}>Error Loading History</h1>
               <p className="text-title text-red-600 mb-4">{error.message}</p>
               <Button onClick={() => window.location.reload()}>Try Again</Button>
             </div>
@@ -49,7 +49,7 @@ export default function HistoryPage() {
       <section className="bg-gradient-to-br from-amber-50 to-orange-100 py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-display text-foreground mb-6">Our History</h1>
+            <h1 className="text-foreground mb-6" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em"}}>Our History</h1>
             <p className="text-title text-muted-foreground mb-6">
               Over a Century of Growth and Innovation
             </p>

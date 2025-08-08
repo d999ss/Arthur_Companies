@@ -24,9 +24,9 @@ export default function GrainPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="mb-8 text-balance" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "hsl(var(--foreground))"}}>
                 Grain Marketing, Grounded in{" "}
-                <span className="text-serif-large text-primary italic">Trust</span>
+                <span className="text-title text-primary italic">Trust</span>
               </h1>
               <p className="text-body-large mb-6 max-w-3xl mx-auto">
                 At Arthur, we deliver grain marketing services that combine local knowledge with market insight.

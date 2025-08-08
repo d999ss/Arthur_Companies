@@ -1,21 +1,20 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { 
-  User, 
-  Lock, 
-  Eye, 
-  EyeOff,
-  LogIn,
-  FileText,
-  TrendingUp,
-  Package,
+import {
+  Bell,
   Calendar,
   CreditCard,
   Download,
-  Bell
+  Eye,
+  EyeOff,
+  FileText,
+  LogIn,
+  Package,
+  TrendingUp,
+  User
 } from 'lucide-react'
+import { useState } from 'react'
 
 export default function ProducerPortal() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -127,7 +126,7 @@ export default function ProducerPortal() {
         <div className="container">
           <div className="flex justify-between items-start">
             <div>
-              <h1 className="text-display mb-4">Welcome back, John</h1>
+              <h1 className="mb-4" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "hsl(var(--foreground))"}}>Welcome back, John</h1>
               <p className="text-body-large text-muted-foreground">
                 Smith Family Farms • Account #12345
               </p>
@@ -186,7 +185,7 @@ export default function ProducerPortal() {
                   <h2 className="text-title">Recent Activity</h2>
                   <a href="#" className="text-sm text-primary hover:underline">View all</a>
                 </div>
-                
+
                 <div className="space-y-4">
                   {[
                     { date: 'Nov 15', type: 'Delivery', details: 'Corn - 2,500 bu @ Arthur', status: 'Completed' },
@@ -201,11 +200,10 @@ export default function ProducerPortal() {
                         <p className="text-sm font-medium mb-1">{activity.type}</p>
                         <p className="text-sm text-muted-foreground">{activity.details}</p>
                       </div>
-                      <span className={`text-xs px-2 py-1 rounded-full ${
-                        activity.status === 'Completed' ? 'bg-green-100 text-green-700' :
-                        activity.status === 'Active' ? 'bg-blue-100 text-blue-700' :
-                        'bg-yellow-100 text-yellow-700'
-                      }`}>
+                      <span className={`text-xs px-2 py-1 rounded-full ${activity.status === 'Completed' ? 'bg-green-100 text-green-700' :
+                          activity.status === 'Active' ? 'bg-blue-100 text-blue-700' :
+                            'bg-yellow-100 text-yellow-700'
+                        }`}>
                         {activity.status}
                       </span>
                     </div>
@@ -261,9 +259,8 @@ export default function ProducerPortal() {
                       <span className="text-sm font-medium">{item.commodity}</span>
                       <div className="flex items-center gap-2">
                         <span className="text-sm">{item.price}</span>
-                        <span className={`text-xs ${
-                          item.change.startsWith('+') ? 'text-green-600' : 'text-red-600'
-                        }`}>
+                        <span className={`text-xs ${item.change.startsWith('+') ? 'text-green-600' : 'text-red-600'
+                          }`}>
                           {item.change}
                         </span>
                       </div>

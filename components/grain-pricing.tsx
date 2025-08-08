@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { TrendingUp, TrendingDown, Minus, RefreshCw, MapPin } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { MapPin, Minus, RefreshCw, TrendingDown, TrendingUp } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 interface GrainPrice {
   commodity: string
@@ -64,7 +64,7 @@ const mockPrices: GrainPrice[] = [
 
 export function GrainPricing() {
   const [prices, setPrices] = useState<GrainPrice[]>(mockPrices)
-  const [selectedLocation, setSelectedLocation] = useState('Arthur, ND')
+  const [selectedLocation] = useState('Arthur, ND')
   const [isRefreshing, setIsRefreshing] = useState(false)
   const [lastRefresh, setLastRefresh] = useState(new Date())
 
@@ -204,8 +204,8 @@ export function GrainPricing() {
       <div className="mt-8 p-6 bg-secondary/20 rounded-xl">
         <h3 className="text-title mb-3">Market Commentary</h3>
         <p className="text-body text-muted-foreground">
-          Grain markets showed mixed movements today with corn gaining on export demand while soybeans 
-          retreated slightly on favorable weather reports. Spring wheat continues to show strength amid 
+          Grain markets showed mixed movements today with corn gaining on export demand while soybeans
+          retreated slightly on favorable weather reports. Spring wheat continues to show strength amid
           quality concerns in competing regions.
         </p>
       </div>

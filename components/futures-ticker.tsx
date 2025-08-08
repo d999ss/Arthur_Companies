@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 interface FuturesTickerData {
   symbol: string
@@ -22,7 +22,7 @@ const generateTickerData = (): FuturesTickerData[] => {
     const variance = (Math.random() - 0.5) * 0.3
     const price = item.basePrice + variance
     const change = (Math.random() - 0.5) * 0.2
-    
+
     return {
       symbol: item.symbol,
       price: Number(price.toFixed(2)),
@@ -61,7 +61,7 @@ export function FuturesTicker() {
   if (tickerData.length === 0) return null
 
   const currentData = tickerData[currentIndex]
-  const isPositive = currentData.change >= 0
+  const isPositive = (currentData?.change ?? 0) >= 0
 
   return (
     <div className="hidden lg:flex items-center bg-card/50 rounded-lg px-3 py-1.5 min-w-[140px] backdrop-blur-sm">
@@ -76,23 +76,22 @@ export function FuturesTicker() {
         >
           {/* Symbol */}
           <div className="text-xs font-mono font-medium text-foreground">
-            {currentData.symbol}
+            {currentData?.symbol ?? 'N/A'}
           </div>
-          
+
           {/* Price */}
           <div className="text-xs font-mono text-foreground">
-            {currentData.price}
+            {currentData?.price ?? '0.00'}
           </div>
-          
+
           {/* Change */}
-          <div className={`text-xs font-mono ${
-            isPositive ? 'text-green-600' : 'text-red-600'
-          }`}>
-            {isPositive ? '+' : ''}{currentData.change}
+          <div className={`text-xs font-mono ${isPositive ? 'text-green-600' : 'text-red-600'
+            }`}>
+            {isPositive ? '+' : ''}{currentData?.change ?? 0}
           </div>
         </motion.div>
       </AnimatePresence>
-      
+
       {/* Live indicator */}
       <div className="flex items-center ml-2 pl-2 border-l border-border/30">
         <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
@@ -134,9 +133,8 @@ export function FuturesHeaderBanner() {
                 <span className="text-xs font-mono text-background">
                   {data.price}
                 </span>
-                <span className={`text-xs font-mono ${
-                  isPositive ? 'text-green-300' : 'text-red-300'
-                }`}>
+                <span className={`text-xs font-mono ${isPositive ? 'text-green-300' : 'text-red-300'
+                  }`}>
                   {isPositive ? '+' : ''}{data.change}
                 </span>
                 <span className="text-xs text-background/50">•</span>

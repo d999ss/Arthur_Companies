@@ -5,7 +5,7 @@ export default function AccessibilityPage() {
       <section className="bg-gradient-to-br from-gray-50 to-slate-100 py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-display text-foreground mb-6">Accessibility Statement</h1>
+            <h1 className="text-foreground mb-6" style={{fontFamily: "'ITC Garamond Std', Georgia, 'Times New Roman', serif", fontWeight: 500, fontSize: "clamp(3rem, 4vw + 0.5rem, 4.5rem)", lineHeight: "1.1", letterSpacing: "-0.01em", color: "hsl(var(--foreground))"}}>Accessibility Statement</h1>
             <p className="text-title text-muted-foreground">
               Our commitment to digital accessibility
             </p>

@@ -1,4 +1,33 @@
-/* Arthur Companies - Anthropic-Inspired Design System */
+/* Arthur Companies - Design Token System */
+
+/* Font Face Declarations as Fallback */
+@font-face {
+  font-family: 'ITC Garamond Std';
+  src: url('/itc-garamond-std.otf') format('opentype');
+  font-weight: 400 500 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Styrene B';
+  src: url('/__styreneB_57fc85-normal-400-100.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Styrene B';
+  src: url('/__styreneB_57fc85-normal-500-100.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('/Tiempos Text Regular-normal-400-100.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
 
 /* Optimized fonts loaded with next/font */
 
@@ -18,59 +47,177 @@
   }
   
   :root {
-    /* Anthropic's warm light tan palette */
-    --background: 48 17% 92%;       /* Light warm tan #f0eee7 */
-    --foreground: 0 0% 9%;          /* Dark text #171717 */
+    /* ===== COLOR TOKENS ===== */
     
-    /* Primary - Dark golden yellow */
-    --primary: 45 85% 45%;          /* #E6B800 - Dark golden yellow */
-    --primary-foreground: 0 0% 100%;
+    /* Brand Colors */
+    --color-brand-primary: 45 85% 45%;          /* #E6B800 - Dark golden yellow */
+    --color-brand-secondary: 0 0% 100%;         /* #ffffff - Pure white */
+    --color-brand-accent: 0 0% 100%;            /* #ffffff - White accents */
+    --color-brand-neutral: 0 0% 9%;             /* #171717 - Deep charcoal */
     
-    /* Light cards against dark background - Anthropic style */
-    --secondary: 0 0% 100%;         /* Pure white cards #ffffff */
-    --secondary-foreground: 0 0% 9%;
-    --muted: 48 17% 88%;            /* Slightly darker warm tan #e8e5dc */
-    --muted-foreground: 0 0% 45%;   /* Muted text */
+    /* Semantic Colors */
+    --color-background: 48 17% 92%;             /* #f0eee7 - Light warm tan */
+    --color-foreground: 0 0% 9%;                /* #171717 - Dark text */
+    --color-primary: var(--color-brand-primary);
+    --color-primary-foreground: 0 0% 100%;
+    --color-secondary: var(--color-brand-secondary);
+    --color-secondary-foreground: var(--color-foreground);
+    --color-muted: 48 17% 88%;                  /* #e8e5dc - Slightly darker warm tan */
+    --color-muted-foreground: 0 0% 45%;         /* Muted text */
+    --color-accent: var(--color-brand-accent);
+    --color-accent-foreground: var(--color-foreground);
+    --color-destructive: 0 72% 51%;             /* #ef4444 */
+    --color-destructive-foreground: 0 0% 100%;
+    --color-border: 48 17% 85%;                 /* #ddd9ce - Light warm border */
+    --color-input: var(--color-brand-secondary);
+    --color-ring: 19 47% 64%;                   /* Match primary */
     
-    /* Card colors - white cards on dark background */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    /* Card Colors */
+    --color-card: var(--color-brand-secondary);
+    --color-card-foreground: var(--color-foreground);
+    --color-popover: var(--color-brand-secondary);
+    --color-popover-foreground: var(--color-foreground);
     
-    /* Accent - white accents */
-    --accent: 0 0% 100%;
-    --accent-foreground: 0 0% 9%;
+    /* ===== TYPOGRAPHY TOKENS ===== */
     
-    /* System colors */
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 48 17% 85%;           /* Light warm border #ddd9ce */
-    --input: 0 0% 100%;             /* White input backgrounds */
-    --ring: 19 47% 64%;             /* Match primary */
-    --radius: 8px;
+    /* Font Families */
+    --font-family-display: 'ITC Garamond Std', Georgia, 'Times New Roman', serif;
+    --font-family-body: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family-serif: 'Tiempos Text', Georgia, 'Times New Roman', serif;
+    
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;                    /* 12px */
+    --font-size-sm: 0.875rem;                   /* 14px */
+    --font-size-base: 1rem;                     /* 16px */
+    --font-size-lg: 1.125rem;                   /* 18px */
+    --font-size-xl: 1.25rem;                    /* 20px */
+    --font-size-2xl: 1.5rem;                    /* 24px */
+    --font-size-3xl: 1.875rem;                  /* 30px */
+    --font-size-4xl: 2.25rem;                   /* 36px */
+    --font-size-5xl: 3rem;                      /* 48px */
+    --font-size-6xl: 3.75rem;                   /* 60px */
+    
+    /* Line Heights */
+    --line-height-tight: 1.1;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.7;
+    
+    /* Letter Spacing */
+    --letter-spacing-tight: -0.01em;
+    --letter-spacing-normal: -0.005em;
+    --letter-spacing-wide: 0;
+    
+    /* ===== SPACING TOKENS ===== */
+    
+    --spacing-0: 0;
+    --spacing-1: 0.25rem;                       /* 4px */
+    --spacing-2: 0.5rem;                        /* 8px */
+    --spacing-3: 0.75rem;                       /* 12px */
+    --spacing-4: 1rem;                          /* 16px */
+    --spacing-5: 1.25rem;                       /* 20px */
+    --spacing-6: 1.5rem;                        /* 24px */
+    --spacing-8: 2rem;                          /* 32px */
+    --spacing-10: 2.5rem;                       /* 40px */
+    --spacing-12: 3rem;                         /* 48px */
+    --spacing-16: 4rem;                         /* 64px */
+    --spacing-20: 5rem;                         /* 80px */
+    --spacing-24: 6rem;                         /* 96px */
+    --spacing-32: 8rem;                         /* 128px */
+    
+    /* ===== BORDER RADIUS TOKENS ===== */
+    
+    --radius-none: 0;
+    --radius-sm: 0.25rem;                       /* 4px */
+    --radius-md: 0.375rem;                      /* 6px */
+    --radius-lg: 0.5rem;                        /* 8px */
+    --radius-xl: 0.75rem;                       /* 12px */
+    --radius-2xl: 1rem;                         /* 16px */
+    --radius-3xl: 1.5rem;                       /* 24px */
+    --radius-full: 9999px;
+    
+    /* ===== SHADOW TOKENS ===== */
+    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-brand: 0 4px 6px -1px rgb(230 184 0 / 0.1), 0 2px 4px -1px rgb(230 184 0 / 0.06);
+    
+    /* ===== ANIMATION TOKENS ===== */
+    
+    --duration-fast: 150ms;
+    --duration-normal: 200ms;
+    --duration-slow: 300ms;
+    --duration-slower: 500ms;
+    
+    --ease-linear: linear;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* ===== Z-INDEX TOKENS ===== */
+    
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 1080;
+    
+    /* ===== LEGACY SUPPORT ===== */
+    
+    /* Map tokens to existing CSS variables for backward compatibility */
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-foreground);
+    --secondary: var(--color-secondary);
+    --secondary-foreground: var(--color-secondary-foreground);
+    --muted: var(--color-muted);
+    --muted-foreground: var(--color-muted-foreground);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-foreground);
+    --destructive: var(--color-destructive);
+    --destructive-foreground: var(--color-destructive-foreground);
+    --border: var(--color-border);
+    --input: var(--color-input);
+    --ring: var(--color-ring);
+    --card: var(--color-card);
+    --card-foreground: var(--color-card-foreground);
+    --popover: var(--color-popover);
+    --popover-foreground: var(--color-popover-foreground);
+    --radius: var(--radius-lg);
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 48 25% 96%;
-    --primary: 19 61% 58%;
-    --primary-foreground: 0 0% 5%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 48 25% 96%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
-    --card: 0 0% 5%;
-    --card-foreground: 48 25% 96%;
-    --popover: 0 0% 5%;
-    --popover-foreground: 48 25% 96%;
-    --accent: 215 87% 51%;
-    --accent-foreground: 0 0% 5%;
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 48 25% 96%;
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 19 61% 58%;
+    /* Dark mode color overrides */
+    --color-background: 0 0% 5%;
+    --color-foreground: 48 25% 96%;
+    --color-primary: 19 61% 58%;
+    --color-primary-foreground: 0 0% 5%;
+    --color-secondary: 0 0% 10%;
+    --color-secondary-foreground: 48 25% 96%;
+    --color-muted: 0 0% 15%;
+    --color-muted-foreground: 0 0% 65%;
+    --color-card: 0 0% 5%;
+    --color-card-foreground: 48 25% 96%;
+    --color-popover: 0 0% 5%;
+    --color-popover-foreground: 48 25% 96%;
+    --color-accent: 215 87% 51%;
+    --color-accent-foreground: 0 0% 5%;
+    --color-destructive: 0 62% 45%;
+    --color-destructive-foreground: 48 25% 96%;
+    --color-border: 0 0% 15%;
+    --color-input: 0 0% 15%;
+    --color-ring: 19 61% 58%;
   }
 }
 
@@ -86,52 +233,13 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: -0.008em;
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-normal);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-  }
-  
-  /* Anthropic-inspired typography hierarchy */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Styrene A', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 500;
-    color: hsl(var(--foreground));
-    line-height: 1.1;
-    letter-spacing: -0.025em;
-    text-wrap: balance;
-  }
-  
-  h1 {
-    font-size: clamp(2.5rem, 4vw + 1rem, 3.5rem);
-    letter-spacing: -0.035em;
-    line-height: 1.05;
-  }
-  
-  h2 {
-    font-size: clamp(2rem, 3vw + 0.5rem, 2.75rem);
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-  }
-  
-  h3 {
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
-    letter-spacing: -0.02em;
-    line-height: 1.15;
-  }
-  
-  h4 {
-    font-size: clamp(1.25rem, 1.5vw + 0.25rem, 1.5rem);
-    letter-spacing: -0.015em;
-    line-height: 1.2;
-  }
-  
-  p {
-    line-height: 1.6;
-    letter-spacing: -0.008em;
   }
   
   /* Selection styling - Anthropic exact */
@@ -145,113 +253,80 @@
   /* Container - Anthropic exact 32px margins */
   .container {
     @apply max-w-7xl mx-auto;
-    padding-left: 2rem;   /* 32px - Anthropic exact */
-    padding-right: 2rem;  /* 32px - Anthropic exact */
+    padding-left: var(--spacing-8);   /* 32px - Anthropic exact */
+    padding-right: var(--spacing-8);  /* 32px - Anthropic exact */
   }
   
-  /* Refined typography classes */
+  /* OFFICIAL TYPOGRAPHY SCALE */
+  
+  /* Display Heading - Used for hero headlines */
   .text-display {
-    font-family: var(--font-styrene-a), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 500;
-    font-size: clamp(2.25rem, 3vw + 0.5rem, 3rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-medium);
+    font-size: clamp(var(--font-size-3xl), 4vw + 0.5rem, var(--font-size-6xl));
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
     color: hsl(var(--foreground));
   }
   
+  /* Section Headline - Used for section headings */
   .text-headline {
-    font-family: var(--font-styrene-a), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 500;
-    font-size: clamp(2rem, 3vw + 0.5rem, 2.75rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-medium);
+    font-size: clamp(var(--font-size-2xl), 3vw + 0.5rem, var(--font-size-4xl));
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
     color: hsl(var(--foreground));
   }
   
+  /* Content Title - Used for subsections */
   .text-title {
-    font-family: var(--font-styrene-a), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 500;
-    font-size: clamp(1.25rem, 2vw + 0.25rem, 1.75rem);
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-medium);
+    font-size: clamp(var(--font-size-xl), 2vw + 0.25rem, var(--font-size-2xl));
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
     color: hsl(var(--foreground));
   }
   
+  /* Large Body Text - Used for important paragraphs */
   .text-body-large {
-    font-family: var(--font-styrene-b), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 400;
-    font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.5rem);
-    line-height: 1.65;
-    letter-spacing: -0.008em;
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-regular);
+    font-size: clamp(var(--font-size-lg), 1.5vw + 0.5rem, var(--font-size-xl));
+    line-height: var(--line-height-relaxed);
+    letter-spacing: var(--letter-spacing-normal);
     color: hsl(var(--foreground));
   }
   
-  .text-subheading {
-    font-family: var(--font-styrene-b), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 400;
-    font-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.5rem);
-    line-height: 1.4;
-    letter-spacing: -0.01em;
-    color: hsl(var(--muted-foreground));
-  }
-  
+  /* Regular Body Text - Used for standard content */
   .text-body {
-    font-family: var(--font-styrene-b), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 400;
-    font-size: clamp(1.125rem, 1.086rem + 0.163vw, 1.25rem);
-    line-height: 1.7;
-    letter-spacing: -0.005em;
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    letter-spacing: var(--letter-spacing-normal);
     color: hsl(var(--foreground));
   }
   
-  .text-body-medium {
-    font-family: var(--font-styrene-b), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.5;
-    letter-spacing: -0.005em;
-    color: hsl(var(--foreground));
-  }
-  
+  /* Small Text - Used for captions and metadata */
   .text-small {
-    font-family: var(--font-styrene-b), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    letter-spacing: -0.005em;
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-normal);
     color: hsl(var(--muted-foreground));
   }
   
-  /* Serif for special emphasis */
-  .text-serif {
-    font-family: var(--font-tiempos), Georgia, 'Times New Roman', serif;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0;
-  }
-  
+  /* Serif Emphasis - Used for quotes and special emphasis */
   .text-serif-large {
-    font-family: var(--font-tiempos), Georgia, 'Times New Roman', serif;
-    font-weight: 400;
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
-    line-height: 1.4;
-    letter-spacing: 0;
-  }
-  
-  .text-serif-display {
-    font-family: var(--font-tiempos), Georgia, 'Times New Roman', serif;
-    font-weight: 400;
-    font-size: clamp(2.25rem, 3vw + 0.5rem, 3rem);
-    line-height: 1.1;
-    letter-spacing: 0;
-  }
-
-  .text-garamond-display {
-    font-family: var(--font-garamond), Georgia, 'Times New Roman', serif;
-    font-weight: 400;
-    font-size: clamp(2.25rem, 3vw + 0.5rem, 3rem);
-    line-height: 1.1;
-    letter-spacing: -0.01em;
+    font-family: var(--font-family-serif);
+    font-weight: var(--font-weight-regular);
+    font-size: clamp(var(--font-size-2xl), 2vw + 0.5rem, var(--font-size-3xl));
+    line-height: var(--line-height-relaxed);
+    letter-spacing: var(--letter-spacing-wide);
+    color: hsl(var(--foreground));
   }
   
   /* Buttons - Anthropic style */
@@ -262,9 +337,9 @@
     @apply hover:bg-foreground/90;
     @apply transition-all duration-200 ease-out;
     @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
-    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 500;
-    letter-spacing: -0.005em;
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-normal);
   }
   
   .btn-secondary {
@@ -274,9 +349,9 @@
     @apply hover:bg-muted;
     @apply transition-all duration-200 ease-out;
     @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
-    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 500;
-    letter-spacing: -0.005em;
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-normal);
   }
   
   /* Cards - refined */

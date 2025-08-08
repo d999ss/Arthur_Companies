@@ -1,8 +1,16 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Users, Building2, Sprout, Factory, Beaker, Truck, ChevronRight } from 'lucide-react'
+import { ArrowRight, Beaker, Building2, ChevronRight, Factory, Sprout, Truck, Users } from 'lucide-react'
+import Link from "next/link"
+
+// Define the service type
+type Service = {
+  icon: React.ComponentType<{ className?: string }>
+  title: string
+  description: string
+  link: string
+}
 
 export default function ProductsServicesPage() {
   return (
@@ -25,7 +33,7 @@ export default function ProductsServicesPage() {
               <p className="text-body mb-12 max-w-3xl mx-auto text-muted-foreground">
                 Arthur Companies provides comprehensive agricultural services that support farmers, processors, and partners across the supply chain.
               </p>
-              
+
               {/* Quick Navigation */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
                 <a href="#on-farm" className="btn-primary">
@@ -37,7 +45,7 @@ export default function ProductsServicesPage() {
                   Off the Farm
                 </a>
               </div>
-              
+
               {/* Value Proposition */}
               <div className="grid md:grid-cols-2 gap-8 text-left">
                 <div className="p-6 card-refined">
@@ -84,7 +92,7 @@ export default function ProductsServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-refined">
-            {[
+            {([
               {
                 icon: Sprout,
                 title: "Agronomy",
@@ -99,7 +107,7 @@ export default function ProductsServicesPage() {
               },
               {
                 icon: Factory,
-                title: "Precision Agriculture", 
+                title: "Precision Agriculture",
                 description: "Technology-driven farming solutions for optimal efficiency.",
                 link: "/services/precision-agriculture"
               },
@@ -109,7 +117,7 @@ export default function ProductsServicesPage() {
                 description: "Premium seeds, fertilizers, and crop protection products.",
                 link: "/services/crop-inputs"
               }
-            ].map((service, index) => {
+            ] as Service[]).map((service, index) => {
               const Icon = service.icon
               return (
                 <motion.div
@@ -119,8 +127,8 @@ export default function ProductsServicesPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Link 
-                    href={service.link}
+                  <Link
+                    href={service.link as any}
                     className="group block p-6 card-refined hover-lift"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -164,7 +172,7 @@ export default function ProductsServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-refined">
-            {[
+            {([
               {
                 icon: Factory,
                 title: "Premium Ingredients",
@@ -189,7 +197,7 @@ export default function ProductsServicesPage() {
                 description: "Global commodity trading and risk management.",
                 link: "/services/trading"
               }
-            ].map((service, index) => {
+            ] as Service[]).map((service, index) => {
               const Icon = service.icon
               return (
                 <motion.div
@@ -199,8 +207,8 @@ export default function ProductsServicesPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Link 
-                    href={service.link}
+                  <Link
+                    href={service.link as any}
                     className="group block p-6 card-refined hover-lift"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -241,14 +249,14 @@ export default function ProductsServicesPage() {
                 Whether you're looking to market grain, source inputs, or explore value-added opportunities, our team is ready to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link 
+                <Link
                   href="/contact"
                   className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-background text-foreground hover:bg-background/90 transition-all duration-200 text-sm font-medium"
                 >
                   Contact Our Team
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link 
+                <Link
                   href="/grain"
                   className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
                 >

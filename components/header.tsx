@@ -144,7 +144,15 @@ export function Header() {
               {/* Services Dropdown */}
               <div className="relative">
                 <button
+                  aria-haspopup="menu"
+                  aria-expanded={activeDropdown === 'services'}
+                  aria-controls="services-menu"
                   onMouseEnter={() => setActiveDropdown('services')}
+                  onFocus={() => setActiveDropdown('services')}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Escape') setActiveDropdown(null)
+                    if (e.key === 'Enter' || e.key === ' ') setActiveDropdown(activeDropdown === 'services' ? null : 'services')
+                  }}
                   className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
                   Services
@@ -155,6 +163,8 @@ export function Header() {
                 <AnimatePresence>
                   {activeDropdown === 'services' && (
                     <motion.div
+                      id="services-menu"
+                      role="menu"
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
@@ -162,6 +172,7 @@ export function Header() {
                       className="absolute top-full left-0 w-[520px] border border-border/20 rounded-xl shadow-lg p-6 mt-1"
                       style={{ backgroundColor: '#f0eee7' }}
                       onMouseLeave={() => setActiveDropdown(null)}
+                      onKeyDown={(e) => { if (e.key === 'Escape') setActiveDropdown(null) }}
                     >
                       <div className="grid grid-cols-2 gap-8">
                         {navigationData.services.items.map((category) => (
@@ -202,7 +213,15 @@ export function Header() {
               {/* Research Dropdown */}
               <div className="relative">
                 <button
+                  aria-haspopup="menu"
+                  aria-expanded={activeDropdown === 'research'}
+                  aria-controls="research-menu"
                   onMouseEnter={() => setActiveDropdown('research')}
+                  onFocus={() => setActiveDropdown('research')}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Escape') setActiveDropdown(null)
+                    if (e.key === 'Enter' || e.key === ' ') setActiveDropdown(activeDropdown === 'research' ? null : 'research')
+                  }}
                   className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
                   Research
@@ -213,6 +232,8 @@ export function Header() {
                 <AnimatePresence>
                   {activeDropdown === 'research' && (
                     <motion.div
+                      id="research-menu"
+                      role="menu"
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
@@ -220,6 +241,7 @@ export function Header() {
                       className="absolute top-full left-0 w-[480px] border border-border/20 rounded-xl shadow-lg p-6 mt-1"
                       style={{ backgroundColor: '#f0eee7' }}
                       onMouseLeave={() => setActiveDropdown(null)}
+                      onKeyDown={(e) => { if (e.key === 'Escape') setActiveDropdown(null) }}
                     >
                       <div className="grid grid-cols-2 gap-8">
                         {navigationData.research.items.map((category) => (
